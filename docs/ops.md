@@ -80,17 +80,39 @@ chmod 640 /var/www/mosagro/.env
 2. Из `DatabaseSeeder` убран factory-user `test@example.com` (не сидить тестовых админов на VPS)
 3. `POST /price` → `throttle:5,1` (6-й запрос за минуту → `429`)
 4. Права `.env` → `640 root:www-data`
+5. `User` реализует `FilamentUser::canAccessPanel()` - без этого в `production` Filament отдаёт **403 Forbidden** после логина (в `local` пускал всех)
+6. **Публичные файлы витрины** (PDF документов, фото товаров, логотипы):
+   - диск Laravel `public` + `php artisan storage:link` → URL `/storage/...`
+   - Filament `FileUpload` (не текстовый путь): документы только PDF ≤20 МБ (обязателен); фото JPEG/PNG/WebP; логотипы без SVG
+   - каталоги: `documents/`, `products/`, `partners/`
+   - у товара: RelationManager **«Документы»** - несколько PDF на одну карточку
+   - Nginx `location ^~ /storage/` - статика, **`.php` в storage → 403** (не исполняется)
+   - PHP `upload_max_filesize=20M` / `post_max_size=24M`
+   - витрина: `Document::publicFileUrl()`, `Product::publicImageUrl()` (только пути `documents/` / `products/`, без `..`)
+   - нет картинки → плейсхолдер «Фото скоро»; есть → `<img>`
+   - поле `external_url` в БД есть, в UI **не используется** (только локальный PDF)
+   - приватный диск `storage/app/private` (и `.env`, логи) **не** публикуются в webroot
+
+### Как загрузить документ в админке
+
+1. `/admin` → Документы → создать/редактировать → «Файл (PDF)»
+2. Или `/admin` → Товар → редактирование → блок **«Документы»** → «Добавить документ» (несколько на товар)
+3. Ссылка на сайте: `/storage/documents/...` (публично для СГР/деклараций)
+
+### Как загрузить фото товара
+
+1. `/admin` → Товар → поле «Фото» → JPEG/PNG/WebP ≤5 МБ
+2. На карточке и в сетке каталога: фото или «Фото скоро»
 
 ### Осталось (не блокеры до дизайна / домена)
 
 - HTTPS + редирект HTTP→HTTPS + `SESSION_SECURE_COOKIE=true`, затем смена пароля админа
-- Security headers в Nginx (CSP, X-Frame-Options, X-Content-Type-Options и т.п.)
-- Allowlist схем `http`/`https` для `external_url` / логотипов партнёров в Filament
-- Жёстче хранение `file_path` (только FileUpload / basename)
+- Security headers в Nginx (CSP, X-Frame-Options и т.п. - частично X-Content-Type-Options на `/storage/`)
+- Allowlist `http`/`https` для URL партнёров (`PartnerBrand.url`)
 - fail2ban или аналог на SSH
 - CAPTCHA/honeypot на форму (throttle уже есть)
 - 2FA для Filament (по желанию)
-- Выровнять владельцев файлов приложения
+- Выровнять владельцев файлов приложения (`501:staff` после rsync с Mac)
 
 Админка сейчас по **HTTP** - для staging приемлемо до сертификата; не использовать с недоверенных сетей.
 

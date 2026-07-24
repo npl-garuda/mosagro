@@ -9,21 +9,19 @@
         @if($section->description)
             <p class="lead">{{ $section->description }}</p>
         @endif
-        <ul class="list-plain">
-            @forelse($section->documents as $document)
-                <li>
-                    @if($document->external_url)
-                        <a href="{{ $document->external_url }}" target="_blank" rel="noopener noreferrer">{{ $document->title }}</a>
-                    @elseif($document->file_path)
-                        <a href="{{ asset('storage/'.$document->file_path) }}">{{ $document->title }}</a>
-                    @else
-                        {{ $document->title }}
-                    @endif
-                </li>
-            @empty
-                <li class="muted">Документы раздела скоро будут загружены.</li>
-            @endforelse
-        </ul>
+                <ul class="list-plain">
+                    @forelse($section->documents as $document)
+                        <li>
+                            @if($document->publicFileUrl())
+                                <a href="{{ $document->publicFileUrl() }}" target="_blank" rel="noopener noreferrer">{{ $document->title }}</a>
+                            @else
+                                {{ $document->title }}
+                            @endif
+                        </li>
+                    @empty
+                        <li class="muted">Документы раздела скоро будут загружены.</li>
+                    @endforelse
+                </ul>
     </div>
 </section>
 @endsection

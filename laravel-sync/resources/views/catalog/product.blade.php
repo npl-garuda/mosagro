@@ -11,7 +11,11 @@
         </p>
         <div class="product-layout">
             <div>
-                <div class="placeholder">Фото скоро</div>
+                @if($product->publicImageUrl())
+                    <img class="product-image" src="{{ $product->publicImageUrl() }}" alt="{{ $product->name }}">
+                @else
+                    <div class="placeholder">Фото скоро</div>
+                @endif
             </div>
             <div>
                 <div class="badges">
@@ -47,10 +51,8 @@
                     <ul class="list-plain">
                         @foreach($product->documents as $document)
                             <li>
-                                @if($document->external_url)
-                                    <a href="{{ $document->external_url }}" target="_blank" rel="noopener noreferrer">{{ $document->title }}</a>
-                                @elseif($document->file_path)
-                                    <a href="{{ asset('storage/'.$document->file_path) }}">{{ $document->title }}</a>
+                                @if($document->publicFileUrl())
+                                    <a href="{{ $document->publicFileUrl() }}" target="_blank" rel="noopener noreferrer">{{ $document->title }}</a>
                                 @else
                                     {{ $document->title }}
                                 @endif

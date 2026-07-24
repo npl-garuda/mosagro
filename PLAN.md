@@ -7,9 +7,9 @@
 - Этап 0 (подготовка): **закрыт**
 - Этап 1 (прототип + тексты): **согласован**
 - Этап 2 (дизайн): **в работе** (формат Figma/PNG пока неизвестен) - **ждём макеты**
-- Этап 3 (Laravel + Filament): **каркас staging готов** (2026-07-24). Админка + публичная витрина + `/price` + почта. Hardening: `APP_DEBUG=false`, throttle формы, права `.env`. HTTPS - позже (сертификата пока нет)
+- Этап 3 (Laravel + Filament): **каркас staging готов** (2026-07-24, доп. медиа в тот же день). Админка + витрина + `/price` + почта. Загрузка PDF/фото в `storage` (публично). Hardening: `APP_DEBUG=false`, throttle, `.env` 640, `FilamentUser`. HTTPS - позже
 - Хостинг: Masterhost; staging-VPS `87.242.65.116` - SSH :4222; UFW: 4222 + 80; публичка http://87.242.65.116/ ; админка `/admin`
-- Git: https://github.com/npl-garuda/mosagro (`main`). Синк публички: `laravel-sync/` → `/var/www/mosagro`. Ops/секреты: `docs/ops.md`, `docs/credentials.local.md` (не в git)
+- Git: https://github.com/npl-garuda/mosagro (`main`). Синк: `laravel-sync/` → `/var/www/mosagro`. Ops: `docs/ops.md`; секреты: `docs/credentials.local.md` (не в git)
 - Почта / SMTP: `administrator@mos-agro.ru` через `smtp.mastermail.ru:465` - проверено (заявки уходят)
 - Дизайн для бэкенда **не нужен** - идёт параллельно
 
@@ -23,9 +23,10 @@
 3. ~~Каркас Laravel + Filament по `docs/data-model.md`~~ - готово
 4. ~~Форма «Запросить прайс лист», сохранение заявок, письмо получателям~~ - готово
 5. ~~Черновая витрина по прототипу (без финального UI)~~ - готово
-6. ~~Базовый hardening staging~~ - готово (см. `docs/ops.md`: production/debug off, throttle, `.env` 640)
-7. **Пауза по UI** - ждём дизайн; затем вёрстка + SEO
-8. Наполнение каталога / документы от заказчика; SSL + DNS при запуске
+6. ~~Базовый hardening staging~~ - готово (см. `docs/ops.md`)
+7. ~~Медиа: FileUpload PDF/фото, storage:link, несколько документов у товара, вывод фото на витрине~~ - готово
+8. **Пауза по UI** - ждём дизайн; затем вёрстка + SEO
+9. Наполнение каталога / документы от заказчика; SSL + DNS при запуске
 
 **Дизайнер (параллельно):**
 1. Макеты публичных страниц по прототипу (админку не рисует)
@@ -236,7 +237,8 @@ Online (для заказчика и дизайнера): https://app.diagrams.n
 - публичная форма `/price` → Lead + email получателям; `throttle:5,1`
 - черновая витрина по `docs/sitemap.md` / `docs/copy.md`
 - демо-seeder каталога; редиректы старых `/cart` и т.п. на `/price`
-- hardening: `APP_ENV=production`, `APP_DEBUG=false`, права `.env` `640 root:www-data`
+- hardening: `APP_ENV=production`, `APP_DEBUG=false`, права `.env` `640 root:www-data`, `FilamentUser`
+- медиа: `storage:link`, FileUpload PDF (документы, N на товар) и фото товаров/логотипов; на витрине фото или плейсхолдер «Фото скоро»
 - детали эксплуатации: `docs/ops.md`
 
 Сущности: бренды, категории, товары (M2M, new/exclusive), фасовки, документы, разделы документов, бренды-партнёры, заявки, получатели email.

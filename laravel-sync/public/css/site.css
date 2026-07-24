@@ -196,6 +196,25 @@ img { max-width: 100%; height: auto; }
   color: var(--muted);
   font-size: .95rem;
 }
+.product-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  background: #f7faf6;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: .7rem;
+}
 @media (max-width: 720px) {
   .header-inner { flex-direction: column; align-items: flex-start; }
   .nav { gap: .55rem .85rem; }

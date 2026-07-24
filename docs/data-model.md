@@ -95,10 +95,10 @@
 
 - id
 - title
-- file_path (nullable)
-- external_url (nullable)
+- file_path (nullable в БД; в админке обязателен PDF через FileUpload)
+- external_url (nullable в БД; **не используется в UI** - оставлен для совместимости)
 - document_section_id (nullable)
-- product_id (nullable)
+- product_id (nullable; у товара может быть несколько Document)
 - sort
 
 Правило: документ привязан к разделу и/или к товару (хотя бы одно из двух).

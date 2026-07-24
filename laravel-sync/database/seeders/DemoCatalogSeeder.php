@@ -102,7 +102,7 @@ class DemoCatalogSeeder extends Seeder
             ['title' => 'СГР Корневин (демо)', 'product_id' => $kornevin->id],
             [
                 'file_path' => null,
-                'external_url' => 'https://www.mos-agro.ru/',
+                'external_url' => null,
                 'document_section_id' => $section->id,
                 'sort' => 0,
             ]
