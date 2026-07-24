@@ -1,0 +1,966 @@
+<mxfile host="Electron" agent="MOSAGRO" pages="23">
+  <diagram id="page1" name="01 Главная">
+    <mxGraphModel dx="1099" dy="861" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1650" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO title: МосАгро - СЗР и удобрения оптом для сада и фермы&lt;br&gt;SEO desc: СЗР и удобрения оптом от производителя. Для дилеров, садовых центров и хозяйств по РФ. Запросите прайс." vertex="1">
+          <mxGeometry height="48" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Средства защиты растений и удобрения оптом от МосАгро" vertex="1">
+          <mxGeometry height="40" width="690" x="55" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Помогаем выращивать урожай - препаратами для сада, огорода и фермерских хозяйств. Оптом от производителя, с документами для дилеров и сетей по всей России." vertex="1">
+          <mxGeometry height="60" width="690" x="55" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" value="Запросить прайс лист" vertex="1">
+          <mxGeometry height="36" width="190" x="55" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#888888;fontSize=11;" value="Смотреть каталог" vertex="1">
+          <mxGeometry height="36" width="150" x="260" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="h2a" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;" value="Для кого" vertex="1">
+          <mxGeometry height="24" width="200" x="55" y="336" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="• Дилеры и оптовики СЗР&lt;br&gt;• Садовые центры и торговые сети&lt;br&gt;• Фермерские и личные подсобные хозяйства (оптовые закупки)" vertex="1">
+          <mxGeometry height="70" width="690" x="55" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="С 2005 года производим и фасуем средства защиты растений для садоводов и хозяйств. Для партнёров по опту - стабильное качество, своя фасовка, госрегистрация и отгрузки в регионы РФ." vertex="1">
+          <mxGeometry height="70" width="690" x="55" y="449" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="Качество при&lt;br&gt;конкурентной оптовой цене" vertex="1">
+          <mxGeometry height="70" width="220" x="55" y="534" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="Своя фасовка&lt;br&gt;и госрегистрация" vertex="1">
+          <mxGeometry height="70" width="220" x="290" y="534" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="Документы + отгрузки&lt;br&gt;по всей РФ" vertex="1">
+          <mxGeometry height="70" width="220" x="525" y="534" as="geometry" />
+        </mxCell>
+        <mxCell id="h2b" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;" value="Как начать работу" vertex="1">
+          <mxGeometry height="24" width="250" x="55" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="t10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="1. Запросите прайс лист&lt;br&gt;2. Согласуйте условия с менеджером&lt;br&gt;3. Получите отгрузку со склада в Москве / по РФ" vertex="1">
+          <mxGeometry height="70" width="690" x="55" y="647" as="geometry" />
+        </mxCell>
+        <mxCell id="t11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Категории: Новинки · От болезней · Стимуляторы · От вредителей · Удобрения" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="t12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Эксклюзив: HB-101 и FLORA (Япония) - дистрибуция в РФ" vertex="1">
+          <mxGeometry height="40" width="690" x="55" y="782" as="geometry" />
+        </mxCell>
+        <mxCell id="t13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Новинки (демо): Корневин · Агролекарь · Этамон Био" vertex="1">
+          <mxGeometry height="45" width="690" x="55" y="837" as="geometry" />
+        </mxCell>
+        <mxCell id="t14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DDDDDD;strokeColor=#999999;fontColor=#666666;fontSize=10;" value="Бренды-партнёры (логотипы)" vertex="1">
+          <mxGeometry height="45" width="690" x="55" y="897" as="geometry" />
+        </mxCell>
+        <mxCell id="t15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Станьте дилером МосАгро - запросите актуальный прайс лист" vertex="1">
+          <mxGeometry height="40" width="690" x="55" y="957" as="geometry" />
+        </mxCell>
+        <mxCell id="t16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="1012" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" value="Для дизайнера:&lt;br&gt;Подзаголовок - «для фермеров»&lt;br&gt;+ опт/SEO.&lt;br&gt;Новые блоки: Для кого,&lt;br&gt;Как начать (3 шага).&lt;br&gt;Баннеров нет.&lt;br&gt;Hero = одно фото." vertex="1">
+          <mxGeometry height="120" width="280" x="780" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page2" name="02 О компании">
+    <mxGraphModel dx="1168" dy="915" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1350" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO: О компании МосАгро - СЗР для сада и фермы с 2005" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="О компании МосАгро" vertex="1">
+          <mxGeometry height="28" width="400" x="55" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="МосАгро работает с 15 августа 2005 года. Мы производим и фасуем средства защиты растений и удобрения для сада, огорода и фермерских хозяйств - и поставляем их оптом дилерам и торговым сетям. Фасовку ведём на своём производстве и на площадках с контролем качества. Препараты собственного производства имеют госрегистрацию и документы для продажи в сетях." vertex="1">
+          <mxGeometry height="120" width="690" x="55" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;" value="Сфера деятельности" vertex="1">
+          <mxGeometry height="24" width="300" x="55" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Помогаем защищать и кормить растения: удобрения, средства от болезней, вредителей и сорняков, микроудобрения, препараты от грызунов. Регистрируем собственные составы и привозим проверенные зарубежные решения. Для оптовых партнёров важны стабильное качество, понятные условия и полный комплект документов." vertex="1">
+          <mxGeometry height="100" width="690" x="55" y="357" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;" value="Ассортимент и география" vertex="1">
+          <mxGeometry height="24" width="350" x="55" y="472" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="В каталоге - питание и защита культур на разных этапах: укоренение, рост, защита урожая, в том числе препараты от кровососущих насекомых для комфортной работы на участке. Отгружаем заказы по всей России через транспортные компании." vertex="1">
+          <mxGeometry height="90" width="690" x="55" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="С нами надёжно выращивать урожай и выгодно работать оптом." vertex="1">
+          <mxGeometry height="40" width="690" x="55" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" value="Запросить прайс лист" vertex="1">
+          <mxGeometry height="36" width="190" x="55" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#888888;fontSize=11;" value="Смотреть каталог" vertex="1">
+          <mxGeometry height="36" width="150" x="260" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="t10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню ·&amp;nbsp; sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" value="Для дизайнера:&lt;br&gt;Тон как на главной:&lt;br&gt;сад/ферма + опт/SEO.&lt;br&gt;См. docs/copy.md" vertex="1">
+          <mxGeometry height="90" width="260" x="780" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page3" name="03 Каталог">
+    <mxGraphModel dx="934" dy="732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1250" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO: Каталог препаратов для сада и фермы оптом - МосАгро" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Каталог препаратов для сада и фермы оптом" vertex="1">
+          <mxGeometry height="28" width="650" x="55" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Всё для защиты и питания растений - от МосАгро и брендов-партнёров. Для дилеров, садовых центров и хозяйств. Розничные цены не публикуем - оптовый прайс по заявке." vertex="1">
+          <mxGeometry height="60" width="690" x="55" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0F0F0;strokeColor=#BBBBBB;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;" value="Категории:&lt;br&gt;• Новинки&lt;br&gt;• От болезней&lt;br&gt;• Стимуляторы роста&lt;br&gt;• От вредителей&lt;br&gt;• Удобрения" vertex="1">
+          <mxGeometry height="170" width="200" x="55" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="[фото]&lt;br&gt;Корневин&lt;br&gt;для рассады и черенков" vertex="1">
+          <mxGeometry height="140" width="150" x="270" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="[фото]&lt;br&gt;Агролекарь&lt;br&gt;защита от болезней" vertex="1">
+          <mxGeometry height="140" width="150" x="435" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="[фото]&lt;br&gt;HB-101&lt;br&gt;эксклюзив FLORA" vertex="1">
+          <mxGeometry height="140" width="150" x="600" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="459" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page4" name="04 Категория">
+    <mxGraphModel dx="934" dy="732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1150" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO: Средства от вредителей для сада и огорода оптом | МосАгро" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#555555;" value="Каталог / От вредителей" vertex="1">
+          <mxGeometry height="20" width="400" x="55" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Средства от вредителей для сада и огорода оптом" vertex="1">
+          <mxGeometry height="28" width="650" x="55" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Помогаем сохранить урожай: препараты от насекомых для овощных, плодовых и цветочных культур. В карточках - фасовки и документы. Цены - в оптовом прайсе." vertex="1">
+          <mxGeometry height="55" width="690" x="55" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="[фото]&lt;br&gt;Каратель&lt;br&gt;опт · фасовки" vertex="1">
+          <mxGeometry height="115" width="165" x="55" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="[фото]&lt;br&gt;Антимуравей&lt;br&gt;опт · фасовки" vertex="1">
+          <mxGeometry height="115" width="165" x="230" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="[фото]&lt;br&gt;Фитоверм&lt;br&gt;опт · фасовки" vertex="1">
+          <mxGeometry height="115" width="165" x="405" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BBBBBB;align=center;verticalAlign=top;spacingTop=4;fontSize=10;" value="[фото]&lt;br&gt;Кинмикс&lt;br&gt;опт · фасовки" vertex="1">
+          <mxGeometry height="115" width="165" x="580" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню ·&amp;nbsp; sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="425" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page5" name="05 Карточка товара">
+    <mxGraphModel dx="1038" dy="813" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1500" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO: Корневин оптом - для рассады и черенков | МосАгро" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#555555;" value="Каталог / Стимуляторы / Корневин" vertex="1">
+          <mxGeometry height="20" width="450" x="55" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DDDDDD;strokeColor=#999999;fontColor=#666666;fontSize=10;" value="[ ФОТО ]" vertex="1">
+          <mxGeometry height="210" width="240" x="55" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Корневин - для крепкой рассады и черенков" vertex="1">
+          <mxGeometry height="40" width="420" x="315" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFE08A;strokeColor=#C9A227;fontSize=9;fontStyle=1;" value="Новинка" vertex="1">
+          <mxGeometry height="22" width="70" x="315" y="227" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#555555;" value="Бренд: МосАгро" vertex="1">
+          <mxGeometry height="22" width="200" x="400" y="227" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Стимулятор корнеобразования для черенков, рассады и луковиц. Оптом от МосАгро - несколько фасовок, документы для сетей в карточке." vertex="1">
+          <mxGeometry height="70" width="420" x="315" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;spacingLeft=8;fontSize=10;fontColor=#555555;" value="Фасовки (справочно): 5 г · 8 г · 10 г · 250 г" vertex="1">
+          <mxGeometry height="32" width="420" x="315" y="337" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" value="Запросить прайс лист" vertex="1">
+          <mxGeometry height="32" width="260" x="315" y="377" as="geometry" />
+        </mxCell>
+        <mxCell id="t10" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;" value="Состав" vertex="1">
+          <mxGeometry height="22" width="200" x="55" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="t11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Демо: действующее вещество - индолилмасляная кислота (уточнить при наполнении)." vertex="1">
+          <mxGeometry height="40" width="690" x="55" y="448" as="geometry" />
+        </mxCell>
+        <mxCell id="t12" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;" value="Применение" vertex="1">
+          <mxGeometry height="22" width="200" x="55" y="503" as="geometry" />
+        </mxCell>
+        <mxCell id="t13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Укоренение черенков, пересадка рассады, обработка луковиц - по инструкции на упаковке." vertex="1">
+          <mxGeometry height="40" width="690" x="55" y="529" as="geometry" />
+        </mxCell>
+        <mxCell id="t14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Документы: СГР.pdf · Декларация.pdf" vertex="1">
+          <mxGeometry height="40" width="690" x="55" y="584" as="geometry" />
+        </mxCell>
+        <mxCell id="t15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="639" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page6" name="06 Эксклюзив">
+    <mxGraphModel dx="934" dy="732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1350" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1200" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO: HB-101 и FLORA для сада и фермы оптом | МосАгро" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="FLORA и HB-101 - для сада и фермы оптом" vertex="1">
+          <mxGeometry height="28" width="650" x="55" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Производство FLORA Co. Ltd. (Япония), импортёр - ООО «Флора». HB-101 и сопутствующие препараты - для тех, кто растит урожай, и для дилеров, которые их снабжают." vertex="1">
+          <mxGeometry height="60" width="690" x="55" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Для сада и ЛПХ&lt;br&gt;HB-101 жидкий 6/50/100 мл&lt;br&gt;гранулированный 10 г&lt;br&gt;Nioinonno и др." vertex="1">
+          <mxGeometry height="110" width="335" x="55" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Для фермерских хозяйств&lt;br&gt;HB-101 гранулированный&lt;br&gt;300 г / 1 кг" vertex="1">
+          <mxGeometry height="110" width="340" x="405" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" value="Эти позиции также в общем каталоге с меткой «Эксклюзив»." vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="399" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню ·&amp;nbsp; sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="449" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page7" name="07 Документы">
+    <mxGraphModel dx="1038" dy="813" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1150" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO: Документы на препараты МосАгро - СГР и декларации" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Документы на препараты для сада и фермы" vertex="1">
+          <mxGeometry height="28" width="550" x="55" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Свидетельства о госрегистрации и декларации - чтобы дилеры и сети спокойно выводили продукцию в продажу. Скачайте PDF или перейдите к производителю." vertex="1">
+          <mxGeometry height="55" width="690" x="55" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="s0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="МосАгро →" vertex="1">
+          <mxGeometry height="40" width="340" x="55" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="HB-101 →" vertex="1">
+          <mxGeometry height="40" width="340" x="410" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Август →" vertex="1">
+          <mxGeometry height="40" width="340" x="55" y="314" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Ортон →" vertex="1">
+          <mxGeometry height="40" width="340" x="410" y="314" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Ваше хозяйство →" vertex="1">
+          <mxGeometry height="40" width="340" x="55" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Прочее →" vertex="1">
+          <mxGeometry height="40" width="340" x="410" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="424" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page8" name="08 Раздел документов">
+    <mxGraphModel dx="983" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1100" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#555555;" value="Документы / МосАгро" vertex="1">
+          <mxGeometry height="20" width="400" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Документы на препараты производства МосАгро" vertex="1">
+          <mxGeometry height="36" width="650" x="55" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="d184" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" value="📄 Декларация Баргузин.pdf - скачать" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="d224" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" value="📄 Декларация Гумат Байкал.pdf - скачать" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="d264" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" value="📄 Декларация Фитоверм.pdf - скачать" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="d304" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" value="📄 ИНТА-Ц-М.pdf - скачать" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" value="Пусто: документы раздела скоро будут загружены." vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="394" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page9" name="09 Прайс заявка">
+    <mxGraphModel dx="983" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1500" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO: Запросить прайс лист МосАгро" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Запросить прайс лист" vertex="1">
+          <mxGeometry height="28" width="400" x="55" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Розничные цены на сайте не публикуем. Актуальный прайс лист препаратов для сада, огорода и хозяйств отправим на email после заявки.&lt;br&gt;&lt;br&gt;Уже с нами - укажите в комментарии.&lt;br&gt;Новый дилер - налогообложение (с НДС / без НДС) и вид деятельности (опт / розница / сети / сопутствующее)." vertex="1">
+          <mxGeometry height="100" width="690" x="55" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;fontColor=#664D03;" value="&lt;b&gt;ФГИС «Сатурн»&lt;/b&gt;&lt;br&gt;Напоминание: для оборота пестицидов и агрохимикатов нужна регистрация.&lt;br&gt;Сайт: fgis-saturn.ru" vertex="1">
+          <mxGeometry height="78" width="335" x="55" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;fontColor=#664D03;" value="&lt;b&gt;«Честный знак» (ГИС МТ)&lt;/b&gt;&lt;br&gt;Напоминание: для оборота удобрений нужна регистрация в сервисе&amp;nbsp;&lt;b&gt;«Честный знак»&amp;nbsp;&lt;/b&gt;&lt;br&gt;Сайт: markirovka.crpt.ru" vertex="1">
+          <mxGeometry height="78" width="340" x="405" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Чеклист перед отправкой:&lt;br&gt;1. Email указан верно - на него отправим прайс лист&lt;br&gt;2. Указаны ИНН и город&lt;br&gt;3. В комментарии - профиль закупки и категории товаров" vertex="1">
+          <mxGeometry height="72" width="690" x="55" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="f329" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" value="ФИО *" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="474" as="geometry" />
+        </mxCell>
+        <mxCell id="f369" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" value="Телефон *" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="f409" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" value="Email *" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="554" as="geometry" />
+        </mxCell>
+        <mxCell id="f449" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" value="ИНН" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="594" as="geometry" />
+        </mxCell>
+        <mxCell id="f489" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" value="Город" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="634" as="geometry" />
+        </mxCell>
+        <mxCell id="f529" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" value="Как удобнее связаться" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="674" as="geometry" />
+        </mxCell>
+        <mxCell id="f569" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" value="Комментарий" vertex="1">
+          <mxGeometry height="34" width="690" x="55" y="714" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#555555;" value="☐ Согласие на обработку ПДн *" vertex="1">
+          <mxGeometry height="26" width="690" x="55" y="754" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" value="Запросить прайс лист" vertex="1">
+          <mxGeometry height="38" width="200" x="55" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="845" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page10" name="10 Прайс спасибо">
+    <mxGraphModel dx="1168" dy="915" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="900" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Заявка на прайс лист принята" vertex="1">
+          <mxGeometry height="28" width="400" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Спасибо! Отправим актуальный прайс лист на указанный email." vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" value="На главную" vertex="1">
+          <mxGeometry height="36" width="130" x="55" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#888888;fontSize=11;" value="В каталог" vertex="1">
+          <mxGeometry height="36" width="120" x="200" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="270" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page14" name="14 Контакты">
+    <mxGraphModel dx="1038" dy="813" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1300" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=9;fontColor=#0D47A1;" value="SEO: Контакты МосАгро - опт, Москва" vertex="1">
+          <mxGeometry height="36" width="690" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Контакты МосАгро" vertex="1">
+          <mxGeometry height="28" width="300" x="55" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Офис: ООО «МосАгро», 129329, Москва, ул. Ивовая, д. 2/8, стр. 1, офис 432&lt;br&gt;&lt;br&gt;Почта: 129329, ул. Ивовая, д. 2, получатель ООО «МосАгро»&lt;br&gt;&lt;br&gt;Склад: ул. Вилюйская, д. 2, стр. 1 (продбаза «Медведково»)&lt;br&gt;&lt;br&gt;Email для опта: sales@mos-agro.ru&lt;br&gt;&lt;br&gt;Телефоны на сайте не публикуются - пишите на email или через формы." vertex="1">
+          <mxGeometry height="260" width="340" x="55" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DDDDDD;strokeColor=#999999;fontColor=#666666;fontSize=10;" value="[ Яндекс.Карта ]&lt;br&gt;офис / склад" vertex="1">
+          <mxGeometry height="260" width="335" x="410" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" value="Запросить прайс лист" vertex="1">
+          <mxGeometry height="36" width="335" x="55" y="474" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="529" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page19" name="19 Юр страницы">
+    <mxGraphModel dx="1437" dy="1126" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1150" width="720" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#999999;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="LOGO  МосАгро" vertex="1">
+          <mxGeometry height="40" width="140" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=10;align=left;spacingLeft=8;" value="МосАгро | Главная | О компании | Каталог | Эксклюзив | Документы | Прайс | Контакты" vertex="1">
+          <mxGeometry height="40" width="540" x="205" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" value="Юридические страницы" vertex="1">
+          <mxGeometry height="28" width="400" x="55" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="/requisites - реквизиты ООО «МосАгро» (утверждает заказчик).&lt;br&gt;&lt;br&gt;/privacy - политика ПДн (заглушка), контакт: sales@mos-agro.ru.&lt;br&gt;&lt;br&gt;/consent - согласие для форм заявок (заглушка)." vertex="1">
+          <mxGeometry height="160" width="690" x="55" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFEFEF;strokeColor=#CCCCCC;align=left;spacingLeft=8;fontSize=10;" value="Меню · sales@mos-agro.ru · Реквизиты · Политика ПДн · Согласие" vertex="1">
+          <mxGeometry height="50" width="690" x="55" y="330" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page20" name="20 Админ Дашборд">
+    <mxGraphModel dx="1334" dy="1046" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1000" width="900" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="Filament /admin  |  Админ: admin@mos-agro.ru" vertex="1">
+          <mxGeometry height="36" width="870" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" vertex="1">
+          <mxGeometry height="910" width="180" x="55" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" value="Дашборд" vertex="1">
+          <mxGeometry height="28" width="200" x="250" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Заявки сегодня: 5&lt;br&gt;(с 00:00 МСК)" vertex="1">
+          <mxGeometry height="70" width="180" x="250" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Товаров активных: 42" vertex="1">
+          <mxGeometry height="70" width="180" x="450" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Получателей email: 8" vertex="1">
+          <mxGeometry height="70" width="180" x="650" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" value="Последние заявки&lt;br&gt;17.07 прайс лист new&lt;br&gt;16.07 прайс лист new&lt;br&gt;15.07 прайс лист new" vertex="1">
+          <mxGeometry height="120" width="580" x="250" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="a10" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" value="Для дизайнера:&lt;br&gt;Админка = Filament UI.&lt;br&gt;Виджет «Заявки сегодня» = кол-во заявок с 00:00 МСК.&lt;br&gt;Не пиксель-перфект Filament." vertex="1">
+          <mxGeometry height="110" width="280" x="780" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." vertex="1">
+          <mxGeometry height="95" width="280" x="780" y="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page21" name="21 Админ Товары список">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Filament /admin  |  Админ: admin@mos-agro.ru" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="55" y="55" width="870" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="180" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="Товары" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="150" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="+ Создать товар" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="110" width="150" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="Поиск…" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="150" width="250" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="Фильтр: бренд / категория / new / exclusive / active" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="520" y="150" width="330" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" value="Название | Бренд | Категории | New | Excl | Active | Действия&lt;br&gt;Корневин | МосАгро | Стимуляторы, Новинки | ✓ | — | ✓ | Изменить · Удалить&lt;br&gt;Агролекарь | МосАгро | От болезней | — | — | ✓ | Изменить · Удалить&lt;br&gt;HB-101 | Flora | Эксклюзив | — | ✓ | ✓ | Изменить · Удалить" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="600" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="a10" value="CRUD: создание / изменение / удаление.&lt;br&gt;Полный каталог загружается отдельно от заказчика." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" vertex="1" parent="1">
+          <mxGeometry x="250" y="420" width="600" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="280" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page22" name="22 Админ Товар форма">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1550" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="1450" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Filament /admin  |  Админ: admin@mos-agro.ru" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="55" y="55" width="870" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="180" height="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="Товар: создать / редактировать" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="400" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="f150" value="Название *" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="150" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f192" value="Slug (авто)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="192" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f234" value="Бренд *  [ выбрать ▼ ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="234" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f276" value="Категории M2M *  [☐ От болезней ☐ Новинки …]  + is_primary" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="276" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f318" value="Короткое описание" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="318" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f360" value="Состав" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="360" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f402" value="Применение" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="402" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f444" value="Фото  [ загрузить / плейсхолдер ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="444" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f486" value="☐ is_new (Новинка)    ☐ is_exclusive (Эксклюзив)    ☐ is_active" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="486" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f528" value="Сортировка" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="528" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="Фасовки (дочерние)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="250" y="570" width="600" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="• 5 г     [↑↓] [удалить]&lt;br&gt;• 10 г    [↑↓] [удалить]&lt;br&gt;• 250 г  [↑↓] [удалить]&lt;br&gt;[+ Добавить фасовку]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="600" width="600" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="Документы к товару: привязка существующих / загрузка PDF" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="715" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" value="Сохранить" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="770" width="120" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a10" value="Удалить товар" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="770" width="130" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a11" value="Отмена" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#888888;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="540" y="770" width="100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a12" value="Фасовки склеиваем в один товар.&lt;br&gt;Комплекты - отдельные товары." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" vertex="1" parent="1">
+          <mxGeometry x="780" y="110" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="280" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page23" name="23 Админ Категории">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Filament /admin  |  Админ: admin@mos-agro.ru" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="55" y="55" width="870" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="180" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="Категории" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="200" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="+ Создать" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="750" y="110" width="100" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="Название | Slug | Active | Sort | Действия&lt;br&gt;Новинки | novinki | ✓ | 1 | Изменить · Удалить&lt;br&gt;От болезней | bolezni | ✓ | 2 | …&lt;br&gt;От вредителей | vred | ✓ | 3 | …&lt;br&gt;Стимуляторы | stim | ✓ | 4 | …" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="600" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="Форма категории: name, slug, sort, is_active" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="360" width="600" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" value="«Новинки» - обычная категория.&lt;br&gt;Товар попадает через M2M + флаг is_new." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" vertex="1" parent="1">
+          <mxGeometry x="250" y="430" width="600" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="280" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page24" name="24 Админ Бренды">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Filament /admin  |  Админ: admin@mos-agro.ru" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="55" y="55" width="870" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="180" height="910" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="Бренды / производители" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="350" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="+ Создать" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="750" y="110" width="100" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="Название | Slug | Active | Действия&lt;br&gt;МосАгро | mosagro | ✓ | Изменить · Удалить&lt;br&gt;FLORA / HB-101 | flora | ✓ | …&lt;br&gt;Август | avgust | ✓ | …" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="600" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="Форма: name, slug, sort, is_active" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="330" width="600" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="280" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page25" name="25 Админ Документы">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Filament /admin  |  Админ: admin@mos-agro.ru" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="55" y="55" width="870" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="180" height="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="Разделы документов + файлы" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="400" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="Разделы:&lt;br&gt;МосАгро | HB-101 | Август | …&lt;br&gt;[+ раздел]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="155" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="Документы в разделе «МосАгро»:&lt;br&gt;• Декларация.pdf (file)&lt;br&gt;• СГР.pdf (file)&lt;br&gt;• nest-m.ru/… (external_url)&lt;br&gt;[+ документ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="550" y="155" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="Форма документа:&lt;br&gt;• title&lt;br&gt;• file_path ИЛИ external_url&lt;br&gt;• document_section_id и/или product_id&lt;br&gt;• sort" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="340" width="600" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" value="Правило: привязка к разделу и/или товару (хотя бы одно)." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" vertex="1" parent="1">
+          <mxGeometry x="250" y="470" width="600" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="280" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page26" name="26 Админ Заявки список">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Filament /admin  |  Админ: admin@mos-agro.ru" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="55" y="55" width="870" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="180" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="Заявки" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="150" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="Фильтр: статус" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="450" y="110" width="350" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="Дата | ФИО | Email | Телефон | Статус |&lt;br&gt;17.07 | Иванов | i@mail | +7… | new | открыть&lt;br&gt;16.07 | Петров | p@mail | +7… | new | открыть" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="600" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="В MVP: просмотр (+ смена статуса по желанию).&lt;br&gt;Письма уходят на все активные ящики." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" vertex="1" parent="1">
+          <mxGeometry x="250" y="345" width="600" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="280" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page27" name="27 Админ Заявка карточка">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Filament /admin  |  Админ: admin@mos-agro.ru" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="55" y="55" width="870" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="180" height="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="Заявка #128" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="350" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="new" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="620" y="112" width="60" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="ФИО: Иванов И.И.&lt;br&gt;Телефон: +7…&lt;br&gt;Email: i@mail.ru&lt;br&gt;ИНН: -&lt;br&gt;Город: Москва&lt;br&gt;Связь: WhatsApp&lt;br&gt;Комментарий: нужна отсрочка" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="155" width="600" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" value="Заявка на прайс лист: только контактные поля формы." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" vertex="1" parent="1">
+          <mxGeometry x="250" y="335" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a10" value="Статус: [ new ▼ ]  Сохранить" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;spacingLeft=8;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="250" y="395" width="300" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="280" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page29" name="29 Админ Email ящики">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Filament /admin  |  Админ: admin@mos-agro.ru" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="55" y="55" width="870" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="180" height="910" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="Ящики для заявок" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="300" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="+ Добавить ящик" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="110" width="150" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="Email | Active | Sort | Действия&lt;br&gt;sales@mos-agro.ru | ✓ | 1 | Изменить · Удалить&lt;br&gt;manager@… | ✓ | 2 | …" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="600" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="Заявка уходит на все is_active=true.&lt;br&gt;Можно 1 или несколько ящиков." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" vertex="1" parent="1">
+          <mxGeometry x="250" y="310" width="600" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="280" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page30" name="30 Админ Бренды-партнёры">
+    <mxGraphModel dx="1334" dy="1046" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1000" width="900" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;fontColor=#FFFFFF;align=left;spacingLeft=10;fontStyle=1;fontSize=12;" value="Filament /admin  |  Админ: admin@mos-agro.ru" vertex="1">
+          <mxGeometry height="36" width="870" x="55" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#90A4AE;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;fontSize=10;" value="МосАгро Admin&lt;br&gt;&lt;br&gt;• Дашборд&lt;br&gt;• Товары&lt;br&gt;• Категории&lt;br&gt;• Бренды&lt;br&gt;• Документы&lt;br&gt;• Разделы документов&lt;br&gt;• Заявки&lt;br&gt;• Ящики email&lt;br&gt;• Бренды-партнёры&lt;br&gt;&lt;br&gt;Выход" vertex="1">
+          <mxGeometry height="910" width="180" x="55" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" value="Бренды-партнёры" vertex="1">
+          <mxGeometry height="28" width="200" x="250" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" parent="1" style="rounded=6;whiteSpace=wrap;html=1;fillColor=#D0D0D0;strokeColor=#666666;fontStyle=1;fontSize=11;" value="+ Добавить" vertex="1">
+          <mxGeometry height="32" width="100" x="750" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;" value="Название | Logo | URL | Active | Действия&lt;br&gt;Бренд-партнёр 1 | [img] | https://… | ✓ | Изменить · Удалить" vertex="1">
+          <mxGeometry height="120" width="600" x="250" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Форма: name, logo, url, sort, is_active" vertex="1">
+          <mxGeometry height="45" width="600" x="250" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." vertex="1">
+          <mxGeometry height="95" width="280" x="780" y="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page31" name="31 Админ переходы">
+    <mxGraphModel dx="934" dy="732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" value="Админка: карта разделов" vertex="1">
+          <mxGeometry height="36" width="500" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#AAAAAA;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Дашборд&lt;br&gt;→ Товары (список → форма CRUD + фасовки + доки)&lt;br&gt;→ Категории (M2M с товарами, в т.ч. Новинки)&lt;br&gt;→ Бренды&lt;br&gt;→ Документы / разделы&lt;br&gt;→ Заявки (список → карточка price/order)&lt;br&gt;→ Ящики email (1..N)&lt;br&gt;→ Бренды-партнёры&lt;br&gt;&lt;br&gt;Публичный сайт не рисуем здесь.&lt;br&gt;UI визуально = Filament (стандарт)." vertex="1">
+          <mxGeometry height="320" width="700" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E0A800;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#664D03;" value="Связь с витриной:&lt;br&gt;is_new + категория Новинки&lt;br&gt;is_exclusive → /exclusive и общий каталог&lt;br&gt;Заявки с сайта → письма + список в админке" vertex="1">
+          <mxGeometry height="120" width="700" x="40" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="designer_skip" parent="1" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=10;fontColor=#B71C1C;fontStyle=1;" value="Для дизайнера:&lt;br&gt;Дизайн админки НЕ рисуем.&lt;br&gt;Остаётся стандартный UI Filament.&lt;br&gt;Здесь только состав разделов и поля." vertex="1">
+          <mxGeometry height="70" width="700" x="40" y="570" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
