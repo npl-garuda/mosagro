@@ -19,7 +19,9 @@ Route::get('/exclusive', [ExclusiveController::class, 'index'])->name('exclusive
 Route::get('/documents', [DocumentController::class, 'index'])->name('documents.index');
 Route::get('/documents/{section}', [DocumentController::class, 'section'])->name('documents.section');
 Route::get('/price', [PriceController::class, 'create'])->name('price.create');
-Route::post('/price', [PriceController::class, 'store'])->name('price.store');
+Route::post('/price', [PriceController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('price.store');
 Route::get('/price/thanks', [PriceController::class, 'thanks'])->name('price.thanks');
 Route::redirect('/cart', '/price', 301);
 Route::redirect('/checkout', '/price', 301);
