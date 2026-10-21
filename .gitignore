@@ -16,3 +16,7 @@ storage/framework/cache/
 storage/framework/sessions/
 storage/framework/views/
 bootstrap/cache/
+laravel/database/*.sqlite
+laravel/public/storage
+laravel/bootstrap/cache/*.php
+laravel/bootstrap/cache/filament/

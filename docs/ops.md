@@ -6,17 +6,37 @@
 
 - GitHub: https://github.com/npl-garuda/mosagro (ветка `main`)
 - Локальный корень: `/Users/npl/MOSAGRO`
-- Полный Laravel на VPS: `/var/www/mosagro` (не весь каркас в git)
-- В git лежит синк публичной части и вспомогательное: `laravel-sync/` → копировать/rsync в `/var/www/mosagro`
+- Движок в git: `laravel/` - полный Laravel с staging (модели, Filament, migrations, views)
+- Runtime на VPS: `/var/www/mosagro` (`.env`, `vendor`, кэши - только на сервере, не в git)
+- Клон монорепо на VPS: `/opt/mosagro` (`git pull` для справки; webroot отдельно)
+- Цепочка синхронизации движка: **VPS `/var/www/mosagro` → git `laravel/` → локальная копия**
+- Дизайн/вёрстка отдельно: `design_v3/`, `layout/` (не смешивать с runtime)
 - Скрипты первичной настройки админки/схемы: `scripts/setup_schema.py`, `scripts/customize_filament.py` (уже применены на VPS)
 - `docs/credentials.local.md`, `.env`, бэкапы drawio (`.$*`, `*.bkp`) - в `.gitignore`
 
-### Деплой правок публички
+### Снять движок с staging в git (источник правды - сервер)
+
+```bash
+rsync -avz --delete \
+  -e 'ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes' \
+  --exclude '.env' --exclude '.env.*' --exclude 'vendor/' --exclude 'node_modules/' \
+  --exclude 'storage/logs/*' --exclude 'storage/framework/cache/data/' \
+  --exclude 'storage/framework/sessions/*' --exclude 'storage/framework/views/*' \
+  --exclude 'bootstrap/cache/*.php' --exclude 'public/storage' \
+  root@87.242.65.116:/var/www/mosagro/ laravel/
+```
+
+### Деплой `laravel/` на staging
 
 ```bash
 rsync -avz -e 'ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes' \
-  laravel-sync/ root@87.242.65.116:/var/www/mosagro/
-ssh -p 4222 root@87.242.65.116 'cd /var/www/mosagro && php artisan optimize:clear && php artisan config:cache && php artisan route:cache'
+  --exclude '.env' --exclude 'vendor/' --exclude 'node_modules/' \
+  --exclude 'storage/logs/*' --exclude 'storage/framework/cache/data/' \
+  --exclude 'storage/framework/sessions/*' --exclude 'storage/framework/views/*' \
+  --exclude 'bootstrap/cache/*.php' --exclude 'public/storage' \
+  laravel/ root@87.242.65.116:/var/www/mosagro/
+ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes root@87.242.65.116 \
+  'cd /var/www/mosagro && php artisan optimize:clear && php artisan config:cache && php artisan route:cache'
 ```
 
 После смены `.env` на сервере всегда: `php artisan config:cache`.
@@ -123,6 +143,7 @@ chmod 640 /var/www/mosagro/.env
 Редиректы 301 на `/price`: `/cart`, `/checkout`, `/login`, `/cabinet`.
 
 Форма прайса: валидация → `leads` (`type=price_request`) → письмо активным `lead_recipients` (fallback: `MAIL_FROM_ADDRESS`). Получатель по демо-seeder: `administrator@mos-agro.ru`.
+Форма дилера `/dealer`: те же поля → `leads` (`type=dealer_request`) → письмо `DealerRequestMail`.
 
 Демо-каталог: `php artisan db:seed --class=DemoCatalogSeeder` (Корневин, HB-101, категории, партнёры).
 
@@ -144,6 +165,8 @@ UI черновой (не финальный дизайн). Тексты из `d
 
 ## Что ждём дальше
 
-1. Дизайн публичных страниц (этап 2) → вёрстка + SEO (этап 4)
-2. Полный каталог от заказчика (этап 5)
-3. Домен, SSL, DNS cutover (этап 6)
+1. ~~Вёрстка по `design_v3/` (desktop + адаптив)~~ - готово → `layout/` (2026-10-20)
+2. Паритет статики с `laravel/` (Blade/CSS/JS) + выкладка на staging
+3. SEO на движке (title/description, sitemap, robots, каноникал, Schema.org)
+4. Полный каталог от заказчика (этап 5)
+5. Домен, SSL, DNS cutover (этап 6)
