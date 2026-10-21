@@ -43,9 +43,8 @@ ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes root@87.242.65.116 \
 
 ### Git push
 
-- Remote в репо: `git@github.com:npl-garuda/mosagro.git`
-- Локальный `~/.ssh/id_ed25519` на GitHub **не** добавлен → `git push` по SSH падает
-- Рабочий путь: HTTPS через `gh` (`gh auth setup-git`), либо добавить SSH-ключ в GitHub
+- Remote: `https://github.com/npl-garuda/mosagro.git` (через `gh` auth)
+- SSH `git@github.com:...` без ключа на GitHub не работает; при необходимости добавить deploy/SSH-ключ
 
 ## VPS
 
