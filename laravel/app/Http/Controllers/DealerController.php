@@ -5,6 +5,7 @@ use App\Mail\DealerRequestMail;
 use App\Models\Lead;
 use App\Models\LeadRecipient;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 class DealerController extends Controller
@@ -45,10 +46,15 @@ class DealerController extends Controller
         dispatch(function () use ($recipients, $lead) {
             Mail::to($recipients)->send(new DealerRequestMail($lead));
         })->afterResponse();
-        return redirect()->route('dealer.thanks');
+        return redirect()
+            ->route('dealer.thanks')
+            ->with('form_thanks', true);
     }
-    public function thanks(): View
+    public function thanks(Request $request): View|RedirectResponse
     {
+        if (! $request->session()->pull('form_thanks')) {
+            return redirect()->route('dealer.create');
+        }
         return view('dealer.thanks');
     }
 }

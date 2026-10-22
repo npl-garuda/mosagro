@@ -5,6 +5,7 @@ use App\Mail\PriceRequestMail;
 use App\Models\Lead;
 use App\Models\LeadRecipient;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 class PriceController extends Controller
@@ -45,10 +46,15 @@ class PriceController extends Controller
         dispatch(function () use ($recipients, $lead) {
             Mail::to($recipients)->send(new PriceRequestMail($lead));
         })->afterResponse();
-        return redirect()->route('price.thanks');
+        return redirect()
+            ->route('price.thanks')
+            ->with('form_thanks', true);
     }
-    public function thanks(): View
+    public function thanks(Request $request): View|RedirectResponse
     {
+        if (! $request->session()->pull('form_thanks')) {
+            return redirect()->route('price.create');
+        }
         return view('price.thanks');
     }
 }

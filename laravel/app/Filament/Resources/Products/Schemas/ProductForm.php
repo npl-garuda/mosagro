@@ -22,22 +22,34 @@ class ProductForm
                         ->relationship('brand', 'name')
                         ->required()
                         ->searchable()
-                        ->preload(),
+                        ->preload()
+                        ->validationMessages([
+                            'required' => 'Выберите бренд.',
+                        ]),
                     TextInput::make('name')
                         ->label('Наименование товара')
                         ->required()
-                        ->maxLength(255),
+                        ->maxLength(255)
+                        ->validationMessages([
+                            'required' => 'Укажите наименование товара.',
+                        ]),
                 ]),
                 Grid::make(2)->schema([
                     TextInput::make('slug')
-                        ->label('Slug')
+                        ->label('ЧПУ (slug)')
                         ->required()
-                        ->maxLength(255),
+                        ->maxLength(255)
+                        ->validationMessages([
+                            'required' => 'Укажите ЧПУ (slug).',
+                        ]),
                     TextInput::make('sort')
-                        ->label('Sort')
+                        ->label('Сортировка')
                         ->required()
                         ->numeric()
-                        ->default(0),
+                        ->default(0)
+                        ->validationMessages([
+                            'required' => 'Укажите сортировку.',
+                        ]),
                 ]),
                 Textarea::make('short_description')
                     ->label('Короткое описание')
@@ -64,6 +76,9 @@ class ProductForm
                     ->required()
                     ->live()
                     ->helperText('Товар попадёт в выбранные категории каталога.')
+                    ->validationMessages([
+                        'required' => 'Выберите хотя бы одну категорию.',
+                    ])
                     ->columnSpanFull(),
                 Select::make('primary_category_id')
                     ->label('Основная категория')
@@ -84,8 +99,28 @@ class ProductForm
                             ->all();
                     })
                     ->required()
+                    ->live()
                     ->helperText('Для URL карточки и хлебных крошек. Должна быть среди выбранных категорий.')
                     ->dehydrated(false)
+                    ->rules([
+                        fn (Get $get): \Closure => function (string $attribute, mixed $value, \Closure $fail) use ($get): void {
+                            $ids = collect($get('categories') ?? [])
+                                ->map(fn ($id) => (int) $id)
+                                ->filter()
+                                ->values()
+                                ->all();
+                            if ($value === null || $value === '') {
+                                $fail('Выберите основную категорию.');
+                                return;
+                            }
+                            if (! in_array((int) $value, $ids, true)) {
+                                $fail('Основная категория должна быть среди выбранных.');
+                            }
+                        },
+                    ])
+                    ->validationMessages([
+                        'required' => 'Выберите основную категорию.',
+                    ])
                     ->columnSpanFull(),
                 Grid::make(3)->schema([
                     Toggle::make('is_active')
