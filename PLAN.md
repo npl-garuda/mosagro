@@ -7,11 +7,13 @@
 - Этап 0 (подготовка): **закрыт**
 - Этап 1 (прототип + тексты): **согласован**; `docs/copy.md` синхронизирован с дизайн-концептом (2026-09-15)
 - Этап 2 (дизайн): **закрыт** → эталон `design_v3/` (desktop + mobile, 2026-10-20)
-- Этап 3 (Laravel + Filament): **каркас staging готов** (2026-07-24, доп. медиа в тот же день). Админка + витрина + `/price` + почта. Загрузка PDF/фото в `storage` (публично). Hardening: `APP_DEBUG=false`, throttle, `.env` 640, `FilamentUser`. HTTPS - позже
-- Хостинг: Masterhost; staging-VPS `87.242.65.116` - SSH :4222; UFW: 4222 + 80; публичка http://87.242.65.116/ ; админка `/admin`
-- Git: https://github.com/npl-garuda/mosagro (`main`). Движок: `laravel/` ↔ VPS `/var/www/mosagro`. Ops: `docs/ops.md`; секреты: `docs/credentials.local.md` (не в git)
-- Почта / SMTP: `administrator@mos-agro.ru` через `smtp.mastermail.ru:465` - проверено (заявки уходят)
-- Вёрстка публички (этап 4, статика): **закрыта** (2026-10-20) → `layout/` по `design_v3/` (desktop + адаптив одним проходом). Аудит ссылок: навигация ок; демо-`#` у PDF/пагинации/поиска - до контента
+- Этап 3 (Laravel + Filament): **закрыт** на staging
+- Этап 4 (публичная витрина на движке): **закрыт** (2026-10-22) - `layout/` → Blade/CSS/JS в `laravel/`, выкладка на staging
+- Staging: публичка http://87.242.65.116/ ; админка `/admin`. Git `main` = локал = `/var/www/mosagro` (движок). HTTPS / DNS - этап 6
+- Хостинг: Masterhost; staging-VPS `87.242.65.116` - SSH :4222; UFW: 4222 + 80
+- Git: https://github.com/npl-garuda/mosagro (`main`). Ops: `docs/ops.md`; секреты: `docs/credentials.local.md` (не в git)
+- Почта / SMTP: заявки уходят (throttle 5/мин на `/price` и `/dealer`)
+- Вёрстка-статика: `layout/` / `design_v3/` - эталон; runtime - только `laravel/`
 
 ### Дизайн: статус макетов
 
@@ -52,20 +54,11 @@
 **Заказчик:** доступы и VPS готовы; старый сайт на shared не трогать; полный каталог - отдельной поставкой
 
 **Мы (сейчас):**
-1. ~~Базовое окружение на VPS~~ - готово
-2. ~~UFW 80 + тест-страница~~ - готово
-3. ~~Каркас Laravel + Filament по `docs/data-model.md`~~ - готово
-4. ~~Форма «Запросить прайс лист», сохранение заявок, письмо получателям~~ - готово
-5. ~~Черновая витрина по прототипу (без финального UI)~~ - готово
-6. ~~Базовый hardening staging~~ - готово (см. `docs/ops.md`)
-7. ~~Медиа: FileUpload PDF/фото, storage:link, несколько документов у товара, вывод фото на витрине~~ - готово
-8. ~~Дизайн desktop `design_v2` + шрифт Open Sans + правило картинок~~ - готово (2026-10-19)
-9. ~~Мобильные макеты по страницам~~ - набор в `design_v2_mobile/` готов (2026-10-20)
-10. ~~Сверка единообразия chrome~~ - `design_v3/` (2026-10-20)
-11. ~~Вёрстка публички (desktop + адаптив) по `design_v3/`~~ - **готово** (2026-10-20); весь набор в `layout/`
-12. **Следующий шаг (позже):** перенос/паритет `layout/` → `laravel/` (Blade + CSS/JS) и выкладка на staging
-13. **Затем:** SEO техника + on-page уже на движке (title/description, sitemap, robots, каноникал, Schema.org)
-14. Каталог от заказчика; SSL + DNS - при запуске (этапы 5–6)
+1. ~~… каркас, hardening, дизайн, вёрстка `layout/`~~ - готово (см. историю ниже)
+2. ~~Паритет `layout/` → `laravel/` + staging~~ - **готово** (2026-10-22): каталог/поиск, галерея фото, бейджи, exclusive по `floora`, dealer, legal/реквизиты, заявки RU
+3. **Следующий шаг:** SEO (title/description уже есть; sitemap.xml, robots, каноникал, Schema.org)
+4. Каталог от заказчика (контент); партнёры с админки на витрину (сейчас hardcoded SVG)
+5. SSL + DNS cutover (этап 6)
 
 Артефакты этапа 1 (утверждены):
 - прототип online: https://app.diagrams.net/#G1Fhvi5EavkyGctbc25juNEoYJtmjrVzIw

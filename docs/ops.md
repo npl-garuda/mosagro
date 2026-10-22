@@ -1,20 +1,19 @@
 # Staging / ops (МосАгро)
 
-Статус на **2026-07-24**. Секреты - только в `docs/credentials.local.md` (не в git).
+Статус на **2026-10-22**. Секреты - только в `docs/credentials.local.md` (не в git).
 
 ## Репозиторий и код
 
 - GitHub: https://github.com/npl-garuda/mosagro (ветка `main`)
 - Локальный корень: `/Users/npl/MOSAGRO`
-- Движок в git: `laravel/` - полный Laravel с staging (модели, Filament, migrations, views)
-- Runtime на VPS: `/var/www/mosagro` (`.env`, `vendor`, кэши - только на сервере, не в git)
+- Движок в git: `laravel/` - полный Laravel (модели, Filament, migrations, views, public CSS/JS/images)
+- Runtime на VPS: `/var/www/mosagro` (`.env`, `vendor`, кэши, `storage/app` uploads - только на сервере)
 - Клон монорепо на VPS: `/opt/mosagro` (`git pull` для справки; webroot отдельно)
-- Цепочка синхронизации движка: **VPS `/var/www/mosagro` → git `laravel/` → локальная копия**
-- Дизайн/вёрстка отдельно: `design_v3/`, `layout/` (не смешивать с runtime)
-- Скрипты первичной настройки админки/схемы: `scripts/setup_schema.py`, `scripts/customize_filament.py` (уже применены на VPS)
-- `docs/credentials.local.md`, `.env`, бэкапы drawio (`.$*`, `*.bkp`) - в `.gitignore`
+- **Актуальная тройка:** git `main` = локальный `laravel/` = `/var/www/mosagro` (без `.env` / `vendor` / uploads)
+- Дизайн/вёрстка-эталон: `design_v3/`, `layout/` (не смешивать с runtime)
+- `docs/credentials.local.md`, `.env`, бэкапы drawio - в `.gitignore`
 
-### Снять движок с staging в git (источник правды - сервер)
+### Снять движок со staging в git
 
 ```bash
 rsync -avz --delete \
@@ -23,6 +22,7 @@ rsync -avz --delete \
   --exclude 'storage/logs/*' --exclude 'storage/framework/cache/data/' \
   --exclude 'storage/framework/sessions/*' --exclude 'storage/framework/views/*' \
   --exclude 'bootstrap/cache/*.php' --exclude 'public/storage' \
+  --exclude 'storage/app/public/*' \
   root@87.242.65.116:/var/www/mosagro/ laravel/
 ```
 
@@ -36,7 +36,7 @@ rsync -avz -e 'ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes' \
   --exclude 'bootstrap/cache/*.php' --exclude 'public/storage' \
   laravel/ root@87.242.65.116:/var/www/mosagro/
 ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes root@87.242.65.116 \
-  'cd /var/www/mosagro && php artisan optimize:clear && php artisan config:cache && php artisan route:cache'
+  'cd /var/www/mosagro && php artisan migrate --force && php artisan optimize:clear && php artisan config:cache && php artisan route:cache && php artisan view:cache'
 ```
 
 После смены `.env` на сервере всегда: `php artisan config:cache`.
@@ -44,128 +44,85 @@ ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes root@87.242.65.116 \
 ### Git push
 
 - Remote: `https://github.com/npl-garuda/mosagro.git` (через `gh` auth)
-- SSH `git@github.com:...` без ключа на GitHub не работает; при необходимости добавить deploy/SSH-ключ
 
 ## VPS
 
 | Параметр | Значение |
 | --- | --- |
 | IP | `87.242.65.116` |
-| SSH | порт **4222**, только ключ, `PermitRootLogin prohibit-password` |
+| SSH | порт **4222**, только ключ |
 | ОС | Ubuntu 26.04, ~1.5 ГБ RAM + swap 2 ГБ |
 | UFW | allow `4222`, `80`; HTTPS (**443**) пока нет |
-| Стек | Nginx 1.28, PHP 8.5-FPM, MySQL 8.4 (только `127.0.0.1`), Composer 2.9 |
-| App | Laravel **13.21** + Filament **4.12** |
+| Стек | Nginx 1.28, PHP 8.5-FPM, MySQL 8.4 (127.0.0.1), Composer 2.9 |
+| App | Laravel **13** + Filament **4** |
 | Docroot | `/var/www/mosagro/public` |
 
 Старый сайт на shared Masterhost **не трогать** до DNS cutover.
 
 ## Laravel `.env` (staging)
 
-Актуально после hardening 2026-07-24:
-
-- `APP_ENV=production`
-- `APP_DEBUG=false`
-- `LOG_LEVEL=error`
+- `APP_ENV=production`, `APP_DEBUG=false`, `LOG_LEVEL=error`
 - `APP_URL=http://87.242.65.116`
+- `APP_LOCALE=ru`
 - `QUEUE_CONNECTION=sync`
 - `MAIL_SCHEME=smtps` + SMTP Mastermail `:465`
-- Сессии: `SESSION_DRIVER=database`
+- `SESSION_DRIVER=database`
 
-### Права на `.env`
+Права `.env`: `chown root:www-data` + `chmod 640`.
 
-Нужно: PHP-FPM (`www-data`) читает файл; остальные пользователи ОС - нет.
+## Публичный сайт (актуально)
 
-```bash
-chown root:www-data /var/www/mosagro/.env
-chmod 640 /var/www/mosagro/.env
-```
-
-- `644` / world-readable - **нельзя**
-- `600` от `root:root` без группы `www-data` - сайт может не подняться, если нет актуального `config:cache`
-- Дубликаты секретов на сервере: `/root/mosagro-db.env`, `/root/mosagro-admin.env` - `chmod 600`
-
-С веба `/.env` закрыт Nginx (`deny` для dotfiles) → `403`.
-
-### Владельцы файлов приложения
-
-Часть дерева после rsync с Mac: uid `501` / `staff`. Рабочий минимум: `storage/` и `bootstrap/cache/` → `www-data:www-data`. Имеет смысл позже выровнять весь `/var/www/mosagro` под deploy-user / `www-data`.
-
-## Безопасность (сделано / осталось)
-
-### Сделано 2026-07-24
-
-1. `APP_DEBUG=false`, `APP_ENV=production`, config cache
-2. Из `DatabaseSeeder` убран factory-user `test@example.com` (не сидить тестовых админов на VPS)
-3. `POST /price` → `throttle:5,1` (6-й запрос за минуту → `429`)
-4. Права `.env` → `640 root:www-data`
-5. `User` реализует `FilamentUser::canAccessPanel()` - без этого в `production` Filament отдаёт **403 Forbidden** после логина (в `local` пускал всех)
-6. **Публичные файлы витрины** (PDF документов, фото товаров, логотипы):
-   - диск Laravel `public` + `php artisan storage:link` → URL `/storage/...`
-   - Filament `FileUpload` (не текстовый путь): документы только PDF ≤20 МБ (обязателен); фото JPEG/PNG/WebP; логотипы без SVG
-   - каталоги: `documents/`, `products/`, `partners/`
-   - у товара: RelationManager **«Документы»** - несколько PDF на одну карточку
-   - Nginx `location ^~ /storage/` - статика, **`.php` в storage → 403** (не исполняется)
-   - PHP `upload_max_filesize=20M` / `post_max_size=24M`
-   - витрина: `Document::publicFileUrl()`, `Product::publicImageUrl()` (только пути `documents/` / `products/`, без `..`)
-   - нет картинки → плейсхолдер «Фото скоро»; есть → `<img>`
-   - поле `external_url` в БД есть, в UI **не используется** (только локальный PDF)
-   - приватный диск `storage/app/private` (и `.env`, логи) **не** публикуются в webroot
-
-### Как загрузить документ в админке
-
-1. `/admin` → Документы → создать/редактировать → «Файл (PDF)»
-2. Или `/admin` → Товар → редактирование → блок **«Документы»** → «Добавить документ» (несколько на товар)
-3. Ссылка на сайте: `/storage/documents/...` (публично для СГР/деклараций)
-
-### Как загрузить фото товара
-
-1. `/admin` → Товар → поле «Фото» → JPEG/PNG/WebP ≤5 МБ
-2. На карточке и в сетке каталога: фото или «Фото скоро»
-
-### Осталось (не блокеры до дизайна / домена)
-
-- HTTPS + редирект HTTP→HTTPS + `SESSION_SECURE_COOKIE=true`, затем смена пароля админа
-- Security headers в Nginx (CSP, X-Frame-Options и т.п. - частично X-Content-Type-Options на `/storage/`)
-- Allowlist `http`/`https` для URL партнёров (`PartnerBrand.url`)
-- fail2ban или аналог на SSH
-- CAPTCHA/honeypot на форму (throttle уже есть)
-- 2FA для Filament (по желанию)
-- Выровнять владельцев файлов приложения (`501:staff` после rsync с Mac)
-
-Админка сейчас по **HTTP** - для staging приемлемо до сертификата; не использовать с недоверенных сетей.
-
-## Публичный сайт (каркас)
-
-Маршруты: `/`, `/about`, `/catalog`, `/catalog/{category}`, `/catalog/{category}/{product}`, `/exclusive`, `/documents`, `/documents/{section}`, `/price`, `/price/thanks`, `/contacts`, `/privacy`, `/consent`, `/requisites`.
+Маршруты: `/`, `/about`, `/catalog`, `/catalog/{category}`, `/catalog/{category}/{product}`, `/exclusive`, `/documents`, `/documents/{section}`, `/price`, `/price/thanks`, `/dealer`, `/dealer/thanks`, `/contacts`, `/privacy`, `/consent`, `/requisites`.
 
 Редиректы 301 на `/price`: `/cart`, `/checkout`, `/login`, `/cabinet`.
 
-Форма прайса: валидация → `leads` (`type=price_request`) → письмо активным `lead_recipients` (fallback: `MAIL_FROM_ADDRESS`). Получатель по демо-seeder: `administrator@mos-agro.ru`.
-Форма дилера `/dealer`: те же поля → `leads` (`type=dealer_request`) → письмо `DealerRequestMail`.
+### Каталог и карточка
 
-Демо-каталог: `php artisan db:seed --class=DemoCatalogSeeder` (Корневин, HB-101, категории, партнёры).
+- Категории и товары из админки; фильтры-чипы + живой поиск по названию
+- Несколько фото товара (`product_images`); первое = основное; на карточке слайдер + миниатюры
+- Бейджи «Новинка» / «Эксклюзив» только от флагов `is_new` / `is_exclusive`
+- `/exclusive` - товары с **основной** категорией `floora`; кнопка «Смотреть в каталоге» → `/catalog/floora`
 
-UI черновой (не финальный дизайн). Тексты из `docs/copy.md`.
+### Формы
+
+- `/price` и `/dealer`: одинаковые поля; обязателен телефон; throttle `5,1`
+- Сохранение в `leads` (`price_request` / `dealer_request`, статус `new`) + письмо активным `lead_recipients`
+- `/price/thanks` и `/dealer/thanks` открываются **только** после успешной отправки (flash `form_thanks`); прямой заход → редирект на форму
+- Галочки ПДн на форме нет; ссылки на `/privacy` и `/consent` в футере
+
+### Legal / реквизиты
+
+- Тексты политики и согласия из документов заказчика (исходники в `docs/*.docx`)
+- Реквизиты + кнопка скачивания xls: `/files/kartochka-klienta-mosagro-vtb.xls` (без телефонов)
+
+### Медиа
+
+- `php artisan storage:link` → `/storage/...`
+- Товары: `products/`; документы: `documents/`; публичные файлы сайта: `public/files/`, `public/images/`
 
 ## Админка Filament
 
-- URL: `/admin` (логин `/admin/login`)
-- CRUD: бренды, категории, товары, фасовки, разделы/документы, партнёры, заявки, получатели
-- Навигация RU; группа «Заявки»; создание заявки из админки отключено (`canCreate=false`)
-- Виджет «Заявки сегодня» - счётчик `price_request` с 00:00 Europe/Moscow
-- Один пользователь: `admin@mos-agro.ru` (пароль в credentials)
+- URL: `/admin`
+- CRUD: бренды, категории, товары (+ категории/primary, галерея, флаги), фасовки, разделы/документы, партнёры, заявки, получатели
+- Заявки: список RU, сортировка `created_at desc`; статусы вручную: Новая / В работе / Закрыта; создание из админки выключено
+- Партнёры в админке пока **не** связаны с полосой на главной (там hardcoded SVG)
+- Виджет «Заявки сегодня» - счётчик с 00:00 Europe/Moscow
+- Логин: `admin@mos-agro.ru` (пароль в credentials)
+
+## Безопасность
+
+Сделано: `APP_DEBUG=false`, throttle форм, `.env` 640, `FilamentUser`, storage без исполнения PHP.
+
+Осталось: HTTPS + `SESSION_SECURE_COOKIE`, смена пароля админа, security headers, CAPTCHA по желанию.
 
 ## Почта
 
-- SMTP: `smtp.mastermail.ru:465` SSL (не `smtp.masterhost.ru`)
+- SMTP: `smtp.mastermail.ru:465` SSL
 - Отправка заявок проверена
-- SPF/DKIM - к боевому запуску / домену
 
-## Что ждём дальше
+## Что дальше
 
-1. ~~Вёрстка по `design_v3/` (desktop + адаптив)~~ - готово → `layout/` (2026-10-20)
-2. Паритет статики с `laravel/` (Blade/CSS/JS) + выкладка на staging
-3. SEO на движке (title/description, sitemap, robots, каноникал, Schema.org)
-4. Полный каталог от заказчика (этап 5)
-5. Домен, SSL, DNS cutover (этап 6)
+1. SEO: sitemap.xml / robots / каноникал / Schema.org
+2. Полный каталог от заказчика; контент Floora (фото, документы раздела)
+3. Партнёры с админки на витрину
+4. Домен, SSL, DNS cutover
