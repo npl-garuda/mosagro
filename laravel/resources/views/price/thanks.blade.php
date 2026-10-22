@@ -1,14 +1,17 @@
 @extends('layouts.app')
 @section('title', 'Заявка на прайс лист принята | МосАгро')
-@section('description', 'Спасибо! Отправим актуальный прайс лист на указанный email.')
+@section('description', 'Спасибо! Свяжемся по телефону и при необходимости отправим прайс лист на email.')
+@section('body_class', 'page-price-thanks')
 @section('content')
-<section class="section">
+<section class="section page-content">
     <div class="wrap">
-        <h1>Заявка на прайс лист принята</h1>
-        <p class="lead">Спасибо! Отправим актуальный прайс лист на указанный email и свяжемся при необходимости.</p>
-        <div class="actions">
-            <a class="btn" href="{{ route('home') }}">На главную</a>
-            <a class="btn btn-secondary" href="{{ route('catalog.index') }}">В каталог</a>
+        <div class="thanks-block">
+            <h1>Заявка на прайс лист принята</h1>
+            <p class="page-lead">Спасибо! Свяжемся по телефону и при необходимости отправим прайс лист на email.</p>
+            <div class="actions">
+                <a class="btn" href="{{ route('home') }}">На главную</a>
+                <a class="btn btn-outline" href="{{ route('catalog.index') }}">В каталог</a>
+            </div>
         </div>
     </div>
 </section>

@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\DealerController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ExclusiveController;
 use App\Http\Controllers\HomeController;
@@ -12,6 +13,11 @@ Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
 Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/consent', [PageController::class, 'consent'])->name('consent');
 Route::get('/requisites', [PageController::class, 'requisites'])->name('requisites');
+Route::get('/dealer', [DealerController::class, 'create'])->name('dealer.create');
+Route::post('/dealer', [DealerController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('dealer.store');
+Route::get('/dealer/thanks', [DealerController::class, 'thanks'])->name('dealer.thanks');
 Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
 Route::get('/catalog/{category}', [CatalogController::class, 'category'])->name('catalog.category');
 Route::get('/catalog/{category}/{product}', [CatalogController::class, 'product'])->name('catalog.product');

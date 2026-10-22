@@ -1,28 +1,21 @@
 @extends('layouts.app')
-@section('title', 'Каталог препаратов для сада и фермы оптом - МосАгро')
+@section('title', 'Каталог препаратов для дома, сада и огорода - МосАгро')
 @section('description', 'Защита и питание растений оптом от МосАгро и брендов-партнёров. Прайс для дилеров - по заявке.')
+@section('body_class', 'page-catalog')
 @section('content')
-<section class="section">
+<section class="section page-content">
     <div class="wrap">
-        <h1>Каталог препаратов для сада и фермы оптом</h1>
-        <p class="lead">Всё для защиты и питания растений - от МосАгро и брендов-партнёров. Подходит дилерам, садовым центрам и хозяйствам. Розничные цены на сайте не публикуем: актуальный оптовый прайс отправим по заявке.</p>
-        @if($categories->isNotEmpty())
-            <div class="grid" style="margin-bottom:1.5rem">
-                @foreach($categories as $category)
-                    <a class="card-link" href="{{ route('catalog.category', $category->slug) }}">
-                        <h3>{{ $category->name }}</h3>
-                    </a>
-                @endforeach
-            </div>
-        @endif
-        <div class="grid">
-            @forelse($products as $product)
-                @include('catalog._card', ['product' => $product])
-            @empty
-                <p class="muted">Товары скоро появятся.</p>
-            @endforelse
+        <nav class="crumbs" aria-label="Хлебные крошки">
+            <a href="{{ route('home') }}">Главная</a> / <span class="here">Каталог</span>
+        </nav>
+        <h1>Каталог препаратов для дома, сада и огорода</h1>
+        @include('catalog._filters')
+        <div id="catalog-results" data-catalog-results aria-live="polite">
+            @include('catalog._results')
         </div>
-        <div style="margin-top:1.5rem">{{ $products->links() }}</div>
     </div>
 </section>
 @endsection
+@push('scripts')
+<script src="{{ asset('js/catalog-search.js') }}" defer></script>
+@endpush

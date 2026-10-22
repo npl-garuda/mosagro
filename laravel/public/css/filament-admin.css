@@ -1,0 +1,14 @@
+.mosagro-product-images .filepond--item:first-child .filepond--file-info-main::before {
+  content: 'Основное';
+  display: inline-block;
+  margin-right: .4rem;
+  padding: .12rem .45rem;
+  border-radius: 999px;
+  background: #15803d;
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .01em;
+  vertical-align: middle;
+}

@@ -7,5 +7,8 @@ class DocumentSection extends Model {
     protected $fillable = ['name','slug','description','brand_id','sort','is_active'];
     protected function casts(): array { return ['is_active'=>'boolean']; }
     public function brand(): BelongsTo { return $this->belongsTo(Brand::class); }
-    public function documents(): HasMany { return $this->hasMany(Document::class); }
+    public function documents(): HasMany
+    {
+        return $this->hasMany(Document::class)->orderBy('sort')->orderBy('id');
+    }
 }

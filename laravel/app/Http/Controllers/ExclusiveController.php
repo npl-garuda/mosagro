@@ -1,15 +1,12 @@
 <?php
 namespace App\Http\Controllers;
-use App\Models\Product;
+use App\Support\FloraBrand;
 use Illuminate\View\View;
 class ExclusiveController extends Controller
 {
     public function index(): View
     {
-        $products = Product::query()
-            ->with(['brand', 'categories'])
-            ->where('is_active', true)
-            ->where('is_exclusive', true)
+        $products = FloraBrand::productsQuery()
             ->orderBy('sort')
             ->orderBy('name')
             ->get();

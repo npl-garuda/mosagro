@@ -16,15 +16,19 @@ class PriceController extends Controller
     public function store(StorePriceRequest $request): RedirectResponse
     {
         $data = $request->validated();
+        $name = trim((string) ($data['organization_name'] ?? ''));
+        if ($name === '') {
+            $name = 'Без названия';
+        }
         $lead = Lead::query()->create([
             'type' => 'price_request',
-            'name' => $data['name'],
+            'name' => $name,
             'phone' => $data['phone'],
-            'email' => $data['email'],
+            'email' => $data['email'] ?? '',
             'inn' => $data['inn'] ?? null,
-            'city' => $data['city'] ?? null,
+            'city' => null,
             'comment' => $data['comment'] ?? null,
-            'contact_preference' => $data['contact_preference'] ?? null,
+            'contact_preference' => $data['work_format'] ?? null,
             'status' => 'new',
         ]);
         $recipients = LeadRecipient::query()
@@ -38,7 +42,9 @@ class PriceController extends Controller
         if ($recipients === []) {
             $recipients = [config('mail.from.address')];
         }
-        Mail::to($recipients)->send(new PriceRequestMail($lead));
+        dispatch(function () use ($recipients, $lead) {
+            Mail::to($recipients)->send(new PriceRequestMail($lead));
+        })->afterResponse();
         return redirect()->route('price.thanks');
     }
     public function thanks(): View

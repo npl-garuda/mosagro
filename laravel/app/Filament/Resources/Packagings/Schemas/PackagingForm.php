@@ -13,7 +13,10 @@ class PackagingForm
         return $schema
             ->components([
                 Select::make('product_id')
+                    ->label('Товар')
                     ->relationship('product', 'name')
+                    ->searchable()
+                    ->preload()
                     ->required(),
                 TextInput::make('name')
                     ->required(),

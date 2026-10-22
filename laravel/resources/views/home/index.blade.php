@@ -1,107 +1,89 @@
 @extends('layouts.app')
 @section('title', 'МосАгро - СЗР и удобрения оптом для сада и фермы')
 @section('description', 'Средства защиты растений и удобрения оптом от МосАгро. Для дилеров, садовых центров и хозяйств по всей России. Запросите прайс.')
+@section('body_class', 'page-home')
 @section('content')
-<section class="hero">
-    <div class="wrap">
-        <h1>Средства защиты растений и удобрения оптом от МосАгро</h1>
-        <p class="lead">Помогаем выращивать урожай - препаратами для сада, огорода и фермерских хозяйств. Оптом от производителя, с документами для дилеров и сетей по всей России.</p>
+<section class="hero-first">
+    <div class="wrap hero-copy">
+        <h1>Средства защиты растений и удобрения оптом от&nbsp;МосАгро</h1>
+        <p class="lead">СЗР и удобрения оптом с 2005. Своя фасовка, документы, отгрузки по РФ.</p>
         <div class="actions">
             <a class="btn" href="{{ route('price.create') }}">Запросить прайс лист</a>
-            <a class="btn btn-secondary" href="{{ route('catalog.index') }}">Смотреть каталог</a>
+            <a class="btn btn-outline" href="{{ route('catalog.index') }}">Смотреть каталог</a>
         </div>
-    </div>
-</section>
-<section class="section">
-    <div class="wrap">
-        <h2>Для кого</h2>
-        <ul class="list-plain">
-            <li>Дилеры и оптовики СЗР</li>
-            <li>Садовые центры и торговые сети</li>
-            <li>Фермерские и личные подсобные хозяйства (оптовые закупки)</li>
-        </ul>
     </div>
 </section>
 <section class="section">
     <div class="wrap">
         <h2>О компании</h2>
-        <p class="lead">С 2005 года производим и фасуем средства защиты растений для садоводов и хозяйств. Для партнёров по опту - стабильное качество, своя фасовка, госрегистрация и отгрузки в регионы РФ.</p>
+        <div class="about-text">
+            <p>Компания МосАгро основана 15 августа 2005 года и за прошедшие годы стала одним из лидеров рынка средств защиты растений для личных подсобных хозяйств.</p>
+            <p>Мы предлагаем самые современные, экологичные и эффективные средства.</p>
+            <p>Также мы предлагаем ассортимент продукции ведущих фирм для защиты от кровососущих насекомых и вредителей. Ваш отдых на природе станет более комфортным и безопасным.</p>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="wrap">
         <h2>Преимущества</h2>
-        <ul class="list-plain">
-            <li>Качество при конкурентной оптовой цене</li>
-            <li>Своя фасовка и госрегистрация</li>
-            <li>Документы для сетей + отгрузки по РФ</li>
-        </ul>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <img class="feature-ico" src="{{ asset('images/icon-price.png') }}" alt="" width="40" height="40">
+                <div class="feature-title">Честная оптовая цена</div>
+            </div>
+            <div class="feature-card">
+                <img class="feature-ico" src="{{ asset('images/icon-pack.png') }}" alt="" width="40" height="40">
+                <div class="feature-title">Своя фасовка и СГР</div>
+            </div>
+            <div class="feature-card">
+                <img class="feature-ico" src="{{ asset('images/icon-docs.png') }}" alt="" width="40" height="40">
+                <div class="feature-title">Документы для сетей</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="wrap">
         <h2>Как начать работу</h2>
-        <ol class="list-plain">
-            <li>Запросите прайс лист</li>
-            <li>Согласуйте условия с менеджером</li>
-            <li>Получите отгрузку со склада в Москве / по РФ</li>
+        <ol class="steps">
+            <li class="step"><span class="step-num" aria-hidden="true">1</span><span class="step-text">Запросите прайс лист</span></li>
+            <li class="step"><span class="step-num" aria-hidden="true">2</span><span class="step-text">Согласуйте условия с менеджером</span></li>
+            <li class="step"><span class="step-num" aria-hidden="true">3</span><span class="step-text">Получите отгрузку со склада в Москве / по РФ</span></li>
         </ol>
     </div>
 </section>
-@if($categories->isNotEmpty())
 <section class="section">
     <div class="wrap">
         <h2>Категории</h2>
-        <div class="grid">
-            @foreach($categories as $category)
-                <a class="card-link" href="{{ route('catalog.category', $category->slug) }}">
-                    <h3>{{ $category->name }}</h3>
+        <div class="feature-grid category-grid">
+            @foreach($categories as $homeCategory)
+                @php
+                    $icon = match ($homeCategory->slug) {
+                        'gryuzuny' => 'icon-rodent.png',
+                        'prochee' => 'icon-other.png',
+                        'hb-101' => 'icon-leaf.png',
+                        default => 'icon-leaf.png',
+                    };
+                @endphp
+                <a class="feature-card feature-card-link" href="{{ route('catalog.category', $homeCategory->slug) }}">
+                    <img class="feature-ico" src="{{ asset('images/'.$icon) }}" alt="" width="40" height="40">
+                    <div class="feature-title">{{ $homeCategory->name }}</div>
                 </a>
             @endforeach
         </div>
     </div>
 </section>
-@endif
-@if($exclusive->isNotEmpty())
-<section class="section">
-    <div class="wrap">
-        <h2>Эксклюзив</h2>
-        <p class="lead">HB-101 и продукция FLORA (Япония) - эксклюзивная дистрибуция в РФ</p>
-        <div class="grid">
-            @foreach($exclusive as $product)
-                @include('catalog._card', ['product' => $product])
-            @endforeach
-        </div>
-        <p style="margin-top:1rem"><a href="{{ route('exclusive') }}">Все эксклюзивные позиции</a></p>
-    </div>
-</section>
-@endif
-@if($newProducts->isNotEmpty())
-<section class="section">
-    <div class="wrap">
-        <h2>Новинки</h2>
-        <div class="grid">
-            @foreach($newProducts as $product)
-                @include('catalog._card', ['product' => $product])
-            @endforeach
+<section class="section exclusive-section">
+    <div class="wrap exclusive-inner">
+        <div class="exclusive-copy">
+            <h2>Эксклюзив</h2>
+            <div class="exclusive-text">
+                <p>МосАгро является эксклюзивным дистрибьютором на территории РФ препаратов НВ-101. Производство компании FLORA Co. Ltd. Япония.</p>
+                <p>Импортер в РФ ООО «Флора», биологический концентрированный питательный состав HB-101.</p>
+            </div>
+            <a class="btn btn-outline" href="{{ route('exclusive') }}">Подробнее</a>
         </div>
     </div>
 </section>
-@endif
-@if($partners->isNotEmpty())
-<section class="section">
-    <div class="wrap">
-        <h2>Бренды-партнёры</h2>
-        <div class="grid">
-            @foreach($partners as $partner)
-                <div class="card-link">
-                    <h3>{{ $partner->name }}</h3>
-                    @if($partner->url)
-                        <p class="meta"><a href="{{ $partner->url }}" rel="noopener noreferrer" target="_blank">Сайт бренда</a></p>
-                    @endif
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-@endif
-<section class="section">
-    <div class="wrap">
-        <h2>Станьте дилером МосАгро</h2>
-        <p class="lead">Запросите актуальный прайс лист</p>
-        <a class="btn" href="{{ route('price.create') }}">Запросить прайс лист</a>
-    </div>
-</section>
+@include('partials.partners')
 @endsection

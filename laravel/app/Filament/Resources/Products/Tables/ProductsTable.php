@@ -20,8 +20,13 @@ class ProductsTable
                     ->searchable(),
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('categories.name')
+                    ->label('Категории')
+                    ->badge()
+                    ->separator(','),
                 TextColumn::make('slug')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 ImageColumn::make('image'),
                 IconColumn::make('is_new')
                     ->boolean(),

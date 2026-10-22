@@ -10,27 +10,23 @@ class StorePriceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
+            'organization_name' => ['nullable', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:50'],
-            'email' => ['required', 'email', 'max:255'],
+            'email' => ['nullable', 'email', 'max:255'],
             'inn' => ['nullable', 'string', 'max:20'],
-            'city' => ['nullable', 'string', 'max:255'],
-            'contact_preference' => ['nullable', 'string', 'max:255'],
+            'work_format' => ['nullable', 'string', 'in:опт,розница,сеть,маркетплейс'],
             'comment' => ['nullable', 'string', 'max:5000'],
-            'consent' => ['accepted'],
         ];
     }
     public function attributes(): array
     {
         return [
-            'name' => 'ФИО',
+            'organization_name' => 'название организации',
             'phone' => 'телефон',
             'email' => 'email',
             'inn' => 'ИНН',
-            'city' => 'город',
-            'contact_preference' => 'как удобнее связаться',
+            'work_format' => 'формат работы',
             'comment' => 'комментарий',
-            'consent' => 'согласие на обработку ПДн',
         ];
     }
 }

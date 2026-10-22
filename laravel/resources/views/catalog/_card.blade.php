@@ -12,10 +12,12 @@
     @else
         <div class="placeholder card-image">Фото скоро</div>
     @endif
-    <div class="badges">
-        @if($product->is_new)<span class="badge">Новинка</span>@endif
-        @if($product->is_exclusive)<span class="badge">Эксклюзив</span>@endif
-    </div>
+    @if($product->is_new || $product->is_exclusive)
+        <div class="badges">
+            @if($product->is_new)<span class="badge badge-new">Новинка</span>@endif
+            @if($product->is_exclusive)<span class="badge badge-exclusive">Эксклюзив</span>@endif
+        </div>
+    @endif
     <h3>{{ $product->name }}</h3>
     @if($product->brand)
         <p class="meta">{{ $product->brand->name }}</p>

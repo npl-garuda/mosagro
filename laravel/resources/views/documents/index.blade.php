@@ -1,23 +1,26 @@
 @extends('layouts.app')
 @section('title', 'Документы на препараты МосАгро - СГР и декларации')
-@section('description', 'Госрегистрация и декларации на препараты для сада и фермы. Скачать PDF или перейти к производителю.')
+@section('description', 'Госрегистрация и декларации на препараты для сада и фермы. Скачать PDF по разделам производителей.')
+@section('body_class', 'page-documents')
 @section('content')
-<section class="section">
+<section class="section page-content">
     <div class="wrap">
+        <nav class="crumbs" aria-label="Хлебные крошки">
+            <a href="{{ route('home') }}">Главная</a> / <span class="here">Документы</span>
+        </nav>
         <h1>Документы на препараты для сада и фермы</h1>
-        <p class="lead">Свидетельства о госрегистрации и декларации - чтобы дилеры и сети могли спокойно выводить продукцию в продажу.</p>
-        <div class="grid">
+        <ul class="docs-sections">
             @forelse($sections as $section)
-                <a class="card-link" href="{{ route('documents.section', $section->slug) }}">
-                    <h3>{{ $section->name }}</h3>
-                    @if($section->description)
-                        <p class="meta">{{ \Illuminate\Support\Str::limit($section->description, 120) }}</p>
-                    @endif
-                </a>
+                <li>
+                    <a class="docs-section-link" href="{{ route('documents.section', $section->slug) }}">
+                        <span class="docs-section-name">{{ $section->name }}</span>
+                        <svg class="docs-section-chevron" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M3.2 5.6 L8 10.4 L12.8 5.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </li>
             @empty
-                <p class="muted">Разделы документов скоро появятся.</p>
+                <li class="muted">Разделы документов скоро появятся.</li>
             @endforelse
-        </div>
+        </ul>
     </div>
 </section>
 @endsection

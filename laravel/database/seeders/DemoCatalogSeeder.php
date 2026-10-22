@@ -29,9 +29,8 @@ class DemoCatalogSeeder extends Seeder
             ['slug' => 'vrediteli', 'name' => 'От вредителей', 'sort' => 3],
             ['slug' => 'udobreniya', 'name' => 'Комплексные удобрения', 'sort' => 4],
         ];
-        $categoryModels = [];
         foreach ($categories as $row) {
-            $categoryModels[$row['slug']] = Category::query()->updateOrCreate(
+            Category::query()->updateOrCreate(
                 ['slug' => $row['slug']],
                 ['name' => $row['name'], 'sort' => $row['sort'], 'is_active' => true]
             );
@@ -65,13 +64,6 @@ class DemoCatalogSeeder extends Seeder
             ]
         );
         DB::table('product_category')->whereIn('product_id', [$kornevin->id, $hb->id])->delete();
-        $kornevin->categories()->attach([
-            $categoryModels['stimulyatory']->id => ['is_primary' => true, 'sort' => 0],
-            $categoryModels['novinki']->id => ['is_primary' => false, 'sort' => 1],
-        ]);
-        $hb->categories()->attach([
-            $categoryModels['stimulyatory']->id => ['is_primary' => true, 'sort' => 0],
-        ]);
         Packaging::query()->where('product_id', $kornevin->id)->delete();
         foreach (['5 г', '8 г', '10 г', '250 г'] as $i => $name) {
             Packaging::query()->create([
