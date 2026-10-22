@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Заявка на дилерство принята | МосАгро')
 @section('description', 'Спасибо! Менеджер свяжется, уточнит условия сотрудничества и при необходимости отправит прайс.')
+@section('robots', 'noindex, follow')
 @section('body_class', 'page-price-thanks page-dealer-thanks')
 @section('content')
 <section class="section page-content">

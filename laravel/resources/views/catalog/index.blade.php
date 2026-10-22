@@ -16,6 +16,12 @@
     </div>
 </section>
 @endsection
+@push('jsonld')
+{!! \App\Support\JsonLd::script(\App\Support\JsonLd::breadcrumbs([
+    ['name' => 'Главная', 'url' => route('home')],
+    ['name' => 'Каталог', 'url' => route('catalog.index')],
+])) !!}
+@endpush
 @push('scripts')
 <script src="{{ asset('js/catalog-search.js') }}" defer></script>
 @endpush

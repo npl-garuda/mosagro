@@ -8,7 +8,25 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 class Product extends Model
 {
-    protected $fillable = ['brand_id','name','slug','short_description','composition','application','image','is_new','is_exclusive','is_active','sort'];
+    protected $fillable = ['brand_id','name','slug','short_description','composition','application','image','is_new','is_exclusive','is_active','sort','seo_title','seo_description','seo_h1'];
+    public function seoTitle(): string
+    {
+        return $this->seo_title ?: ($this->name.' оптом | МосАгро');
+    }
+    public function seoDescription(): string
+    {
+        if ($this->seo_description) {
+            return $this->seo_description;
+        }
+        return \Illuminate\Support\Str::limit(
+            $this->short_description ?: ($this->name.' оптом от МосАгро'),
+            150
+        );
+    }
+    public function seoH1(): string
+    {
+        return $this->seo_h1 ?: $this->name;
+    }
     protected function casts(): array
     {
         return ['is_new'=>'boolean','is_exclusive'=>'boolean','is_active'=>'boolean'];

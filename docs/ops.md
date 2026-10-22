@@ -111,18 +111,32 @@ ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes root@87.242.65.116 \
 
 ## Безопасность
 
-Сделано: `APP_DEBUG=false`, throttle форм, `.env` 640, `FilamentUser`, storage без исполнения PHP.
+Аудит staging **2026-10-22**: критических уязвимостей (RCE / открытая БД / утечка `.env`) не найдено. Главный риск до прода - админка по HTTP без `Secure`-cookie.
 
-Осталось: HTTPS + `SESSION_SECURE_COOKIE`, смена пароля админа, security headers, CAPTCHA по желанию.
+Сделано: `APP_DEBUG=false`, throttle форм, `.env` 640, `FilamentUser`, storage без исполнения PHP, SSH только ключ, UFW 4222+80, MySQL localhost.
+
+**Перед релизом (обязательно закрыть):**
+1. HTTPS + `SESSION_SECURE_COOKIE=true` + HSTS
+2. `composer update` по `composer audit` (Livewire/Filament, commonmark, guzzle и др.)
+3. Смена пароля админа; по желанию ограничить `/admin` (IP / VPN / basic auth)
+4. fail2ban (SSH); догнать OS updates; security headers; `server_tokens off`; `expose_php=Off`
+5. Ужесточить `canAccessPanel()` (не всегда `true`)
+6. CAPTCHA на формах - по желанию
 
 ## Почта
 
 - SMTP: `smtp.mastermail.ru:465` SSL
 - Отправка заявок проверена
 
+## SEO
+
+Рабочий документ: `docs/seo.md`. На движке: `/robots.txt`, `/sitemap.xml`, canonical/OG/JSON-LD, noindex admin/thanks, поля `seo_*` у товаров/категорий.
+
+Cutover: чеклист в `docs/seo.md`; nginx-образец `docs/nginx-cutover.example.conf`; 301 - `laravel/config/legacy_redirects.php`; Метрика - `YANDEX_METRIKA_ID` в `.env`.
+
 ## Что дальше
 
-1. SEO: sitemap.xml / robots / каноникал / Schema.org
+1. SEO волны 2–4: контент каталога, cutover (домен/HTTPS/Вебмастер/Метрика), мониторинг
 2. Полный каталог от заказчика; контент Floora (фото, документы раздела)
 3. Партнёры с админки на витрину
-4. Домен, SSL, DNS cutover
+4. Домен, SSL, DNS cutover + security checklist перед релизом

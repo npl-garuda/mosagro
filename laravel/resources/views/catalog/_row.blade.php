@@ -18,7 +18,7 @@
 <article class="prod-row">
     <a class="prod-thumb" href="{{ $url }}" aria-label="{{ $product->name }}">
         @if($imageUrl)
-            <img src="{{ $imageUrl }}" alt="">
+            <img src="{{ $imageUrl }}" alt="{{ $product->name }}">
         @else
             Фото скоро
         @endif

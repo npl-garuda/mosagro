@@ -135,6 +135,22 @@ class ProductForm
                         ->required()
                         ->helperText('Показывает бейдж «Эксклюзив» на сайте.'),
                 ]),
+                TextInput::make('seo_title')
+                    ->label('SEO title')
+                    ->maxLength(255)
+                    ->helperText('Пусто = «{название} оптом | МосАгро».')
+                    ->columnSpanFull(),
+                Textarea::make('seo_description')
+                    ->label('SEO description')
+                    ->rows(2)
+                    ->maxLength(512)
+                    ->helperText('Пусто = короткое описание / запасной шаблон.')
+                    ->columnSpanFull(),
+                TextInput::make('seo_h1')
+                    ->label('SEO H1')
+                    ->maxLength(255)
+                    ->helperText('Пусто = наименование товара.')
+                    ->columnSpanFull(),
                 FileUpload::make('image_paths')
                     ->label('Изображения')
                     ->multiple()

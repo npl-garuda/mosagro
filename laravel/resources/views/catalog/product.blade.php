@@ -1,14 +1,19 @@
 @extends('layouts.app')
-@section('title', $product->name.' оптом | МосАгро')
-@section('description', \Illuminate\Support\Str::limit($product->short_description ?: ($product->name.' оптом от МосАгро'), 150))
-@section('body_class', 'page-product')
 @php
     $gallery = $product->galleryImageUrls();
     $imageUrl = $gallery->first();
     $packs = $product->packagings->pluck('name')->filter()->values();
     $docs = $product->documents;
     $docLabels = $docs->pluck('title')->filter()->values();
+    $productUrl = url()->current();
+    $categoryLabel = ($category->slug ?? null) === 'all' ? null : ($category->seoH1() ?? $category->name);
 @endphp
+@section('title', $product->seoTitle())
+@section('description', $product->seoDescription())
+@section('canonical', $productUrl)
+@section('og_type', 'product')
+@section('og_image', $imageUrl ?: asset('images/logo.png'))
+@section('body_class', 'page-product')
 @section('content')
 <section class="section page-content">
     <div class="wrap">
@@ -16,17 +21,17 @@
             <a href="{{ route('home') }}">Главная</a> /
             <a href="{{ route('catalog.index') }}">Каталог</a> /
             @if(($category->slug ?? null) === 'all')
-                <span class="here">{{ $product->name }}</span>
+                <span class="here">{{ $product->seoH1() }}</span>
             @else
-                <a href="{{ route('catalog.category', $category->slug) }}">{{ $category->name }}</a> /
-                <span class="here">{{ $product->name }}</span>
+                <a href="{{ route('catalog.category', $category->slug) }}">{{ $categoryLabel }}</a> /
+                <span class="here">{{ $product->seoH1() }}</span>
             @endif
         </nav>
         <div class="product-layout">
             <div class="product-gallery" @if($gallery->count() > 1) data-product-gallery @endif>
                 <div class="product-photo" data-gallery-main>
                     @if($imageUrl)
-                        <img src="{{ $imageUrl }}" alt="{{ $product->name }}" data-gallery-image>
+                        <img src="{{ $imageUrl }}" alt="{{ $product->seoH1() }}" data-gallery-image>
                         @if($gallery->count() > 1)
                             <button type="button" class="gallery-nav gallery-prev" data-gallery-prev aria-label="Предыдущее фото">‹</button>
                             <button type="button" class="gallery-nav gallery-next" data-gallery-next aria-label="Следующее фото">›</button>
@@ -47,14 +52,14 @@
                                 aria-label="Фото {{ $index + 1 }}"
                                 aria-pressed="{{ $index === 0 ? 'true' : 'false' }}"
                             >
-                                <img src="{{ $thumbUrl }}" alt="">
+                                <img src="{{ $thumbUrl }}" alt="{{ $product->seoH1() }} - фото {{ $index + 1 }}">
                             </button>
                         @endforeach
                     </div>
                 @endif
             </div>
             <div class="product-info">
-                <h1>{{ $product->name }}</h1>
+                <h1>{{ $product->seoH1() }}</h1>
                 @if($product->is_new || $product->is_exclusive)
                     <div class="badges">
                         @if($product->is_new)<span class="badge badge-new">Новинка</span>@endif
@@ -140,7 +145,7 @@
                     <a class="related-card" href="{{ $itemUrl ?? route('catalog.index') }}">
                         <div class="related-ph">
                             @if($itemImage)
-                                <img src="{{ $itemImage }}" alt="">
+                                <img src="{{ $itemImage }}" alt="{{ $item->name }}">
                             @else
                                 Фото скоро
                             @endif
@@ -158,6 +163,21 @@
 </section>
 @endif
 @endsection
+@push('jsonld')
+@php
+    $crumbItems = [
+        ['name' => 'Главная', 'url' => route('home')],
+        ['name' => 'Каталог', 'url' => route('catalog.index')],
+    ];
+    if ($categoryLabel) {
+        $crumbItems[] = ['name' => $categoryLabel, 'url' => route('catalog.category', $category->slug)];
+    }
+    $crumbItems[] = ['name' => $product->seoH1(), 'url' => $productUrl];
+@endphp
+{!! \App\Support\JsonLd::script(\App\Support\JsonLd::breadcrumbs($crumbItems)) !!}
+{!! \App\Support\JsonLd::script(\App\Support\JsonLd::product($product, $productUrl, $imageUrl)) !!}
+@endpush
 @push('scripts')
 <script src="{{ asset('js/product.js') }}?v={{ @filemtime(public_path('js/product.js')) ?: '1' }}"></script>
 @endpush
+

@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'МосАгро')</title>
-    <meta name="description" content="@yield('description', 'Средства защиты растений и удобрения оптом от МосАгро.')">
+    @include('partials.seo-head')
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,5 +77,6 @@
 </footer>
 <script src="{{ asset('js/menu.js') }}"></script>
 @stack('scripts')
+@include('partials.metrika')
 </body>
 </html>

@@ -25,7 +25,7 @@
                     <article class="prod-row">
                         <a class="prod-thumb" href="{{ $url }}" aria-label="{{ $product->name }}">
                             @if($imageUrl)
-                                <img src="{{ $imageUrl }}" alt="">
+                                <img src="{{ $imageUrl }}" alt="{{ $product->name }}">
                             @else
                                 Фото скоро
                             @endif
@@ -59,3 +59,9 @@
     </div>
 </section>
 @endsection
+@push('jsonld')
+{!! \App\Support\JsonLd::script(\App\Support\JsonLd::breadcrumbs([
+    ['name' => 'Главная', 'url' => route('home')],
+    ['name' => 'Эксклюзив', 'url' => route('exclusive')],
+])) !!}
+@endpush
