@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources\Categories\Schemas;
 
+use App\Support\CategoryIcons;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -27,6 +29,15 @@ class CategoryForm
                 Toggle::make('is_active')
                     ->label('Активна')
                     ->required(),
+                Select::make('icon')
+                    ->label('Иконка на главной')
+                    ->options(CategoryIcons::selectOptions())
+                    ->allowHtml()
+                    ->native(false)
+                    ->searchable()
+                    ->required()
+                    ->default(CategoryIcons::DEFAULT)
+                    ->helperText('Отображается в блоке «Категории» на главной.'),
                 TextInput::make('seo_title')
                     ->label('SEO title')
                     ->maxLength(255)

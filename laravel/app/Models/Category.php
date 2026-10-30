@@ -1,11 +1,20 @@
 <?php
 namespace App\Models;
+use App\Support\CategoryIcons;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Category extends Model {
-    protected $fillable = ['name','slug','sort','is_active','seo_title','seo_description','seo_h1'];
+    protected $fillable = ['name','slug','sort','is_active','icon','seo_title','seo_description','seo_h1'];
     protected function casts(): array { return ['is_active'=>'boolean']; }
+    public function iconKey(): string
+    {
+        return CategoryIcons::isValid($this->icon) ? $this->icon : CategoryIcons::DEFAULT;
+    }
+    public function iconUrl(): string
+    {
+        return CategoryIcons::assetUrl($this->iconKey());
+    }
     public function seoTitle(): string
     {
         return $this->seo_title ?: ($this->name.' оптом | МосАгро');

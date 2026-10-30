@@ -57,16 +57,8 @@
         <h2>Категории</h2>
         <div class="feature-grid category-grid">
             @foreach($categories as $homeCategory)
-                @php
-                    $icon = match ($homeCategory->slug) {
-                        'gryuzuny' => 'icon-rodent.png',
-                        'prochee' => 'icon-other.png',
-                        'hb-101' => 'icon-leaf.png',
-                        default => 'icon-leaf.png',
-                    };
-                @endphp
                 <a class="feature-card feature-card-link" href="{{ route('catalog.category', $homeCategory->slug) }}">
-                    <img class="feature-ico" src="{{ asset('images/'.$icon) }}" alt="" width="40" height="40">
+                    <img class="feature-ico" src="{{ $homeCategory->iconUrl() }}" alt="" width="40" height="40">
                     <div class="feature-title">{{ $homeCategory->name }}</div>
                 </a>
             @endforeach

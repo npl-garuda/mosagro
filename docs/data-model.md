@@ -33,6 +33,7 @@
 - slug
 - sort
 - is_active
+- icon (string, ключ из набора `CategoryIcons` - PNG в `public/images/icon-{key}.png`; на главной в блоке «Категории»)
 - timestamps
 
 Товар связан с категориями через M2M `product_category` (основная + дополнительные при необходимости).

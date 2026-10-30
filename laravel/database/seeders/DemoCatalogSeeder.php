@@ -8,6 +8,7 @@ use App\Models\LeadRecipient;
 use App\Models\Packaging;
 use App\Models\PartnerBrand;
 use App\Models\Product;
+use App\Support\CategoryIcons;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 class DemoCatalogSeeder extends Seeder
@@ -32,7 +33,12 @@ class DemoCatalogSeeder extends Seeder
         foreach ($categories as $row) {
             Category::query()->updateOrCreate(
                 ['slug' => $row['slug']],
-                ['name' => $row['name'], 'sort' => $row['sort'], 'is_active' => true]
+                [
+                    'name' => $row['name'],
+                    'sort' => $row['sort'],
+                    'is_active' => true,
+                    'icon' => CategoryIcons::fromSlug($row['slug']),
+                ]
             );
         }
         $kornevin = Product::query()->updateOrCreate(

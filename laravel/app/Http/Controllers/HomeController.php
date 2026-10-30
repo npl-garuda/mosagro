@@ -7,7 +7,7 @@ class HomeController extends Controller
     public function index(): View
     {
         return view('home.index', [
-            'categories' => Category::query()->activeOrdered()->get(['id', 'slug', 'name']),
+            'categories' => Category::query()->activeOrdered()->get(['id', 'slug', 'name', 'icon']),
         ]);
     }
 }

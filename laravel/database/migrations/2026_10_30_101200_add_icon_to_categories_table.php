@@ -1,0 +1,26 @@
+<?php
+use App\Support\CategoryIcons;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+return new class extends Migration {
+    public function up(): void
+    {
+        Schema::table('categories', function (Blueprint $table) {
+            $table->string('icon', 32)->nullable()->after('is_active');
+        });
+        $rows = DB::table('categories')->get(['id', 'slug']);
+        foreach ($rows as $row) {
+            DB::table('categories')->where('id', $row->id)->update([
+                'icon' => CategoryIcons::fromSlug($row->slug),
+            ]);
+        }
+    }
+    public function down(): void
+    {
+        Schema::table('categories', function (Blueprint $table) {
+            $table->dropColumn('icon');
+        });
+    }
+};

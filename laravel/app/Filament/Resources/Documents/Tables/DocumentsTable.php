@@ -11,26 +11,32 @@ class DocumentsTable
     {
         return $table
             ->columns([
-                TextColumn::make('title')
-                    ->label('Название')
-                    ->searchable(),
-                TextColumn::make('file_path')
-                    ->label('Файл')
-                    ->searchable(),
-                TextColumn::make('section.name')
-                    ->label('Раздел')
-                    ->placeholder('-'),
                 TextColumn::make('product.name')
                     ->label('Товар')
                     ->searchable()
                     ->placeholder('-'),
+                TextColumn::make('title')
+                    ->label('Название документа')
+                    ->searchable(),
+                TextColumn::make('product.brand.name')
+                    ->label('Бренд')
+                    ->searchable()
+                    ->placeholder('-'),
+                TextColumn::make('created_at')
+                    ->label('Дата загрузки')
+                    ->dateTime('d.m.Y H:i')
+                    ->sortable(),
                 TextColumn::make('sort')
-                    ->label('Сорт.')
+                    ->label('Сортировка')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
+                TextColumn::make('file_path')
+                    ->label('Файл')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('section.name')
+                    ->label('Раздел')
+                    ->placeholder('-')
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
                     ->dateTime()
