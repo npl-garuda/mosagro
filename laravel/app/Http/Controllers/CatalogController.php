@@ -42,6 +42,9 @@ class CatalogController extends Controller
             return redirect()->route('catalog.index');
         }
         $q = trim((string) $request->query('q', ''));
+        if ($q !== '') {
+            return redirect()->route('catalog.index', ['q' => $q]);
+        }
         $categoryModel = Category::query()
             ->where('slug', $category)
             ->where('is_active', true)
@@ -49,14 +52,11 @@ class CatalogController extends Controller
         $products = $categoryModel->products()
             ->with(['brand', 'categories', 'packagings', 'documents', 'images'])
             ->where('products.is_active', true)
-            ->when($q !== '', fn ($query) => $query->where('products.name', 'like', '%'.$q.'%'))
             ->orderBy('products.sort')
             ->orderBy('products.name')
             ->paginate(24)
             ->withQueryString();
-        $emptyMessage = $q !== ''
-            ? 'Таких товаров не найдено, проверьте правильность поиска ...'
-            : 'В этой категории пока нет товаров.';
+        $emptyMessage = 'В этой категории пока нет товаров.';
         if ($this->wantsCatalogPartial($request)) {
             return view('catalog._results', [
                 'products' => $products,
@@ -68,7 +68,7 @@ class CatalogController extends Controller
             'products' => $products,
             'categories' => $this->filterCategories(),
             'activeFilter' => $categoryModel->slug,
-            'searchQuery' => $q,
+            'searchQuery' => '',
             'emptyMessage' => $emptyMessage,
         ]);
     }

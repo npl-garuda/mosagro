@@ -28,10 +28,12 @@
             @endif
         </nav>
         <div class="product-layout">
-            <div class="product-gallery" @if($gallery->count() > 1) data-product-gallery @endif>
+            <div class="product-gallery" @if($imageUrl) data-product-gallery @endif>
                 <div class="product-photo" data-gallery-main>
                     @if($imageUrl)
-                        <img src="{{ $imageUrl }}" alt="{{ $product->seoH1() }}" data-gallery-image>
+                        <button type="button" class="product-photo-open" data-gallery-open aria-label="Открыть фото">
+                            <img src="{{ $imageUrl }}" alt="{{ $product->seoH1() }}" data-gallery-image>
+                        </button>
                         @if($gallery->count() > 1)
                             <button type="button" class="gallery-nav gallery-prev" data-gallery-prev aria-label="Предыдущее фото">‹</button>
                             <button type="button" class="gallery-nav gallery-next" data-gallery-next aria-label="Следующее фото">›</button>
@@ -68,7 +70,12 @@
                 @endif
                 <div class="product-meta">
                     @if($product->short_description)
-                        <p class="product-meta-line">{{ \Illuminate\Support\Str::limit($product->short_description, 120) }}</p>
+                        <div class="text-clamp" data-text-clamp data-clamp-lines="3">
+                            <div class="text-clamp-body" data-text-clamp-body>
+                                <p class="product-meta-line">{{ $product->short_description }}</p>
+                            </div>
+                            <button type="button" class="text-clamp-toggle" data-text-clamp-toggle hidden aria-expanded="false">Читать полностью</button>
+                        </div>
                     @endif
                     @if($product->brand)
                         <p class="product-meta-line"><b>Бренд:</b> {{ $product->brand->name }}</p>
@@ -86,17 +93,25 @@
                     <button type="button" class="product-tab" role="tab" aria-selected="false" data-tab="documents">Документы</button>
                 </div>
                 <div class="product-panel is-active" id="panel-description" role="tabpanel" data-panel="description">
-                    @if($product->composition)
-                        <p>{{ $product->composition }}</p>
-                    @elseif($product->short_description)
-                        <p>{{ $product->short_description }}</p>
+                    @if($product->composition || $product->short_description)
+                        <div class="text-clamp" data-text-clamp data-clamp-lines="5">
+                            <div class="text-clamp-body" data-text-clamp-body>
+                                <p>{{ $product->composition ?: $product->short_description }}</p>
+                            </div>
+                            <button type="button" class="text-clamp-toggle" data-text-clamp-toggle hidden aria-expanded="false">Читать полностью</button>
+                        </div>
                     @else
                         <p class="muted">Описание скоро появится.</p>
                     @endif
                 </div>
                 <div class="product-panel" id="panel-application" role="tabpanel" data-panel="application" hidden>
                     @if($product->application)
-                        <p>{{ $product->application }}</p>
+                        <div class="text-clamp" data-text-clamp data-clamp-lines="5">
+                            <div class="text-clamp-body" data-text-clamp-body>
+                                <p>{{ $product->application }}</p>
+                            </div>
+                            <button type="button" class="text-clamp-toggle" data-text-clamp-toggle hidden aria-expanded="false">Читать полностью</button>
+                        </div>
                     @else
                         <p class="muted">Инструкция по применению скоро появится.</p>
                     @endif
@@ -118,7 +133,7 @@
                             @endforeach
                         </ul>
                     @else
-                        <p class="muted">Документы скоро появятся.</p>
+                        <p class="muted">У данного товара нет документов</p>
                     @endif
                 </div>
                 <div class="product-actions actions">

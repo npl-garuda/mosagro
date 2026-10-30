@@ -134,6 +134,8 @@ ssh -p 4222 -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes root@87.242.65.116 \
 
 Cutover: чеклист в `docs/seo.md`; nginx-образец `docs/nginx-cutover.example.conf`; 301 - `laravel/config/legacy_redirects.php`; Метрика - `YANDEX_METRIKA_ID` в `.env`.
 
+**Документы на сайте:** в разделе (МосАгро и т.п.) PDF группируются по полю «Препарат (товар)» у документа. После rsync: `chown -R www-data:www-data storage` (иначе падают загрузки Livewire).
+
 ## Что дальше
 
 1. SEO волны 2–4: контент каталога, cutover (домен/HTTPS/Вебмастер/Метрика), мониторинг

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>МосАгро - карточка товара (вёрстка)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body class="page-product">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="01-home.html"><img src="images/logo.png" alt="МосАгро" width="176" height="82"></a>
+    <nav class="nav nav-desktop" aria-label="Основное меню">
+      <a href="04-about.html">О компании</a>
+      <a href="02-catalog.html">Каталог</a>
+      <a href="05-documents.html">Документы</a>
+      <a href="06-contacts.html">Контакты</a>
+    </nav>
+    <a class="btn btn-header" href="07-price.html">Запросить прайс лист</a>
+    <button type="button" class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-sheet" id="mobile-menu" hidden data-mobile-menu>
+  <div class="mobile-sheet-bar">
+    <a class="brand" href="01-home.html"><img src="images/logo.png" alt="МосАгро" width="176" height="82"></a>
+    <button type="button" class="menu-close" aria-label="Закрыть меню" data-menu-close>&times;</button>
+  </div>
+  <nav class="mobile-nav" aria-label="Мобильное меню">
+    <a href="04-about.html">О компании</a>
+    <a href="02-catalog.html">Каталог</a>
+    <a href="05-documents.html">Документы</a>
+    <a href="06-contacts.html">Контакты</a>
+  </nav>
+  <a class="btn btn-block" href="07-price.html">Запросить прайс лист</a>
+</div>
+
+
+<main>
+  <section class="section page-content">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки">
+        <a href="01-home.html">Главная</a> /
+        <a href="02-catalog.html">Каталог</a> /
+        <a href="11-catalog-category.html">Средства защиты растений</a> /
+        <span class="here">Корневин</span>
+      </nav>
+      <div class="product-layout">
+        <div class="product-photo">Фото скоро</div>
+        <div class="product-info">
+          <h1>Корневин</h1>
+          <div class="product-meta">
+            <p class="product-meta-line"><b>Бренд:</b> МосАгро</p>
+            <p class="product-meta-line">Стимулятор корнеобразования</p>
+            <p class="product-meta-line"><b>Фасовки:</b> 5 г · 8 г · 10 г · 250 г</p>
+            <p class="product-meta-line"><b>Документы:</b> СГР · декларация · паспорт (PDF)</p>
+          </div>
+          <div class="product-tabs" role="tablist" aria-label="Разделы карточки">
+            <button type="button" class="product-tab is-active" role="tab" aria-selected="true" data-tab="description">Описание</button>
+            <button type="button" class="product-tab" role="tab" aria-selected="false" data-tab="application">Применение</button>
+            <button type="button" class="product-tab" role="tab" aria-selected="false" data-tab="documents">Документы</button>
+          </div>
+          <div class="product-panel is-active" id="panel-description" role="tabpanel" data-panel="description">
+            <p>Стимулятор корнеобразования для рассады и черенков. Фасовки для опта, документы для сетей.</p>
+          </div>
+          <div class="product-panel" id="panel-application" role="tabpanel" data-panel="application" hidden>
+            <p>Применение по инструкции на упаковке. Для рассады, черенков и укоренения. Точные дозировки - в карточке и документах.</p>
+          </div>
+          <div class="product-panel" id="panel-documents" role="tabpanel" data-panel="documents" hidden>
+            <ul class="product-docs" id="documents">
+              <li class="product-doc">
+                <span class="product-doc-title">Свидетельство о госрегистрации</span>
+                <a class="product-doc-link" href="#">PDF ↓</a>
+              </li>
+              <li class="product-doc">
+                <span class="product-doc-title">Декларация соответствия</span>
+                <a class="product-doc-link" href="#">PDF ↓</a>
+              </li>
+              <li class="product-doc">
+                <span class="product-doc-title">Паспорт качества</span>
+                <a class="product-doc-link" href="#">PDF ↓</a>
+              </li>
+            </ul>
+          </div>
+          <div class="product-actions actions">
+            <a class="btn" href="07-price.html">Запросить прайс лист</a>
+            <a class="btn btn-outline" href="#documents" data-open-tab="documents">Скачать документы</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section related-section">
+    <div class="wrap">
+      <h2>Сопутствующие товары</h2>
+      <div class="related-slider" data-related-slider>
+        <button type="button" class="related-nav related-prev" data-related-prev aria-label="Назад">‹</button>
+        <div class="related-track" data-related-track>
+          <a class="related-card" href="03-product.html"><div class="related-ph">Фото скоро</div><div class="related-name">Антижук</div><div class="related-sub">Инсектицид</div></a>
+          <a class="related-card" href="03-product.html"><div class="related-ph">Фото скоро</div><div class="related-name">Фитоспорин-М</div><div class="related-sub">Биофунгицид</div></a>
+          <a class="related-card" href="03-product.html"><div class="related-ph">Фото скоро</div><div class="related-name">Торнадо</div><div class="related-sub">Гербицид</div></a>
+          <a class="related-card" href="03-product.html"><div class="related-ph">Фото скоро</div><div class="related-name">Агрикола</div><div class="related-sub">Удобрение</div></a>
+          <a class="related-card" href="03-product.html"><div class="related-ph">Фото скоро</div><div class="related-name">Раундап</div><div class="related-sub">Гербицид</div></a>
+          <a class="related-card" href="03-product.html"><div class="related-ph">Фото скоро</div><div class="related-name">Биогард</div><div class="related-sub">Биопрепарат</div></a>
+          <a class="related-card" href="03-product.html"><div class="related-ph">Фото скоро</div><div class="related-name">Престиж</div><div class="related-sub">Протравитель</div></a>
+          <a class="related-card" href="03-product.html"><div class="related-ph">Фото скоро</div><div class="related-name">Эпин</div><div class="related-sub">Стимулятор роста</div></a>
+        </div>
+        <button type="button" class="related-nav related-next" data-related-next aria-label="Вперёд">›</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="01-home.html">
+        <img class="footer-logo" src="images/logo.png" alt="МосАгро" width="176" height="82">
+      </a>
+      <a class="footer-dealer" href="09-dealer.html">Стать дилером</a>
+      <div class="footer-meta">
+        <a href="mailto:sales@mos-agro.ru">sales@mos-agro.ru</a><br>
+        Москва, м. Свиблово, проезд Нансена, 1
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="04-about.html">О компании</a>
+        <a href="02-catalog.html">Каталог</a>
+        <a href="05-documents.html">Документы</a>
+        <a href="06-contacts.html">Контакты</a>
+      </nav>
+      <nav class="footer-legal" aria-label="Юридические ссылки">
+        <a href="12-requisites.html">Реквизиты</a>
+        <a href="13-privacy.html">Политика ПДн</a>
+        <a href="14-consent.html">Согласие</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="js/menu.js"></script>
+
+<script>
+(() => {
+  const tabs = Array.from(document.querySelectorAll('.product-tab'));
+  const panels = Array.from(document.querySelectorAll('.product-panel'));
+  if (!tabs.length) return;
+  const activate = (name) => {
+    tabs.forEach((tab) => {
+      const on = tab.dataset.tab === name;
+      tab.classList.toggle('is-active', on);
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panels.forEach((panel) => {
+      const on = panel.dataset.panel === name;
+      panel.classList.toggle('is-active', on);
+      panel.hidden = !on;
+    });
+  };
+  tabs.forEach((tab) => tab.addEventListener('click', () => activate(tab.dataset.tab)));
+  document.querySelectorAll('[data-open-tab]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const name = btn.getAttribute('data-open-tab');
+      if (!name) return;
+      e.preventDefault();
+      activate(name);
+      document.getElementById('panel-' + name)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+  if (location.hash === '#documents') activate('documents');
+})();
+</script>
+<script>
+(() => {
+  const root = document.querySelector('[data-related-slider]');
+  if (!root) return;
+  const track = root.querySelector('[data-related-track]');
+  const prev = root.querySelector('[data-related-prev]');
+  const next = root.querySelector('[data-related-next]');
+  if (!track || !prev || !next) return;
+  const cards = Array.from(track.children);
+  if (!cards.length) return;
+  cards.forEach((el) => el.setAttribute('data-related-original', ''));
+  let setWidth = 0;
+  let jumping = false;
+  let settleTimer = 0;
+  const gap = () => {
+    const styles = getComputedStyle(track);
+    return parseFloat(styles.columnGap || styles.gap) || 0;
+  };
+  const cardStep = () => {
+    const card = track.querySelector('.related-card');
+    if (!card) return 0;
+    return card.getBoundingClientRect().width + gap();
+  };
+  const pageStep = () => {
+    const perPage = window.matchMedia('(min-width: 800px)').matches ? 4 : 2;
+    return cardStep() * Math.min(perPage, cards.length);
+  };
+  const cloneSet = (items) => {
+    const frag = document.createDocumentFragment();
+    items.forEach((el) => {
+      const node = el.cloneNode(true);
+      node.removeAttribute('data-related-original');
+      node.setAttribute('data-clone', '');
+      node.setAttribute('aria-hidden', 'true');
+      frag.appendChild(node);
+    });
+    return frag;
+  };
+  const jumpTo = (left) => {
+    jumping = true;
+    const prevBehavior = track.style.scrollBehavior;
+    track.style.scrollBehavior = 'auto';
+    track.scrollLeft = left;
+    track.style.scrollBehavior = prevBehavior;
+    jumping = false;
+  };
+  const setup = () => {
+    track.querySelectorAll('[data-clone]').forEach((n) => n.remove());
+    const items = Array.from(track.querySelectorAll('[data-related-original]'));
+    if (!items.length) return;
+    track.insertBefore(cloneSet(items), items[0]);
+    track.appendChild(cloneSet(items));
+    setWidth = items.length * cardStep();
+    jumpTo(setWidth);
+    root.classList.toggle('is-loop', track.scrollWidth > track.clientWidth + 2);
+  };
+  const normalize = () => {
+    if (jumping || !setWidth) return;
+    if (track.scrollLeft < setWidth) {
+      jumpTo(track.scrollLeft + setWidth);
+    } else if (track.scrollLeft >= setWidth * 2) {
+      jumpTo(track.scrollLeft - setWidth);
+    }
+  };
+  const onScroll = () => {
+    if (jumping) return;
+    clearTimeout(settleTimer);
+    settleTimer = window.setTimeout(normalize, 60);
+  };
+  prev.addEventListener('click', () => {
+    track.scrollBy({ left: -pageStep(), behavior: 'smooth' });
+  });
+  next.addEventListener('click', () => {
+    track.scrollBy({ left: pageStep(), behavior: 'smooth' });
+  });
+  track.addEventListener('scroll', onScroll, { passive: true });
+  track.addEventListener('scrollend', normalize);
+  window.addEventListener('resize', () => {
+    const rel = setWidth ? (track.scrollLeft % setWidth) : 0;
+    setup();
+    jumpTo(setWidth + rel);
+  });
+  setup();
+})();
+</script>
+
+</body>
+</html>

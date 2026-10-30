@@ -6,7 +6,7 @@
 <section class="hero-first">
     <div class="wrap hero-copy">
         <h1>Средства защиты растений и удобрения оптом от&nbsp;МосАгро</h1>
-        <p class="lead">СЗР и удобрения оптом с 2005. Своя фасовка, документы, отгрузки по РФ.</p>
+        <p class="lead">СЗР и удобрения оптом с 2005. Своя фасовка, документы, отгрузки по РФ и СНГ.</p>
         <div class="actions">
             <a class="btn" href="{{ route('price.create') }}">Запросить прайс лист</a>
             <a class="btn btn-outline" href="{{ route('catalog.index') }}">Смотреть каталог</a>
@@ -29,15 +29,15 @@
         <div class="feature-grid">
             <div class="feature-card">
                 <img class="feature-ico" src="{{ asset('images/icon-price.png') }}" alt="" width="40" height="40">
-                <div class="feature-title">Честная оптовая цена</div>
+                <div class="feature-title">Выгодные цены</div>
             </div>
             <div class="feature-card">
                 <img class="feature-ico" src="{{ asset('images/icon-pack.png') }}" alt="" width="40" height="40">
-                <div class="feature-title">Своя фасовка и СГР</div>
+                <div class="feature-title">Контроль качества продукции</div>
             </div>
             <div class="feature-card">
                 <img class="feature-ico" src="{{ asset('images/icon-docs.png') }}" alt="" width="40" height="40">
-                <div class="feature-title">Документы для сетей</div>
+                <div class="feature-title">Разрешительная документация</div>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
         <ol class="steps">
             <li class="step"><span class="step-num" aria-hidden="true">1</span><span class="step-text">Запросите прайс лист</span></li>
             <li class="step"><span class="step-num" aria-hidden="true">2</span><span class="step-text">Согласуйте условия с менеджером</span></li>
-            <li class="step"><span class="step-num" aria-hidden="true">3</span><span class="step-text">Получите отгрузку со склада в Москве / по РФ</span></li>
+            <li class="step"><span class="step-num" aria-hidden="true">3</span><span class="step-text">Получите отгрузку со склада в Москве / по РФ и СНГ</span></li>
         </ol>
     </div>
 </section>

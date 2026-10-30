@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>МосАгро - главная (вёрстка)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body class="page-home">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="01-home.html"><img src="images/logo.png" alt="МосАгро" width="176" height="82"></a>
+    <nav class="nav nav-desktop" aria-label="Основное меню">
+      <a href="04-about.html">О компании</a>
+      <a href="02-catalog.html">Каталог</a>
+      <a href="05-documents.html">Документы</a>
+      <a href="06-contacts.html">Контакты</a>
+    </nav>
+    <a class="btn btn-header" href="07-price.html">Запросить прайс лист</a>
+    <button type="button" class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-sheet" id="mobile-menu" hidden data-mobile-menu>
+  <div class="mobile-sheet-bar">
+    <a class="brand" href="01-home.html"><img src="images/logo.png" alt="МосАгро" width="176" height="82"></a>
+    <button type="button" class="menu-close" aria-label="Закрыть меню" data-menu-close>&times;</button>
+  </div>
+  <nav class="mobile-nav" aria-label="Мобильное меню">
+    <a href="04-about.html">О компании</a>
+    <a href="02-catalog.html">Каталог</a>
+    <a href="05-documents.html">Документы</a>
+    <a href="06-contacts.html">Контакты</a>
+  </nav>
+  <a class="btn btn-block" href="07-price.html">Запросить прайс лист</a>
+</div>
+<main>
+  <section class="hero-first">
+    <div class="wrap hero-copy">
+      <h1>Средства защиты растений и удобрения оптом от&nbsp;МосАгро</h1>
+      <p class="lead">СЗР и удобрения оптом с 2005. Своя фасовка, документы, отгрузки по РФ и СНГ.</p>
+      <div class="actions">
+        <a class="btn" href="07-price.html">Запросить прайс лист</a>
+        <a class="btn btn-outline" href="02-catalog.html">Смотреть каталог</a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <h2>О компании</h2>
+      <div class="about-text">
+        <p>Компания МосАгро основана 15 августа 2005 года и за прошедшие годы стала одним из лидеров рынка средств защиты растений для личных подсобных хозяйств.</p>
+        <p>Мы предлагаем самые современные, экологичные и эффективные средства.</p>
+        <p>Также мы предлагаем ассортимент продукции ведущих фирм для защиты от кровососущих насекомых и вредителей. Ваш отдых на природе станет более комфортным и безопасным.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <h2>Преимущества</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <img class="feature-ico" src="images/icon-price.png" alt="" width="40" height="40">
+          <div class="feature-title">Честная оптовая цена</div>
+        </div>
+        <div class="feature-card">
+          <img class="feature-ico" src="images/icon-pack.png" alt="" width="40" height="40">
+          <div class="feature-title">Своя фасовка и СГР</div>
+        </div>
+        <div class="feature-card">
+          <img class="feature-ico" src="images/icon-docs.png" alt="" width="40" height="40">
+          <div class="feature-title">Документы для сетей</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <h2>Как начать работу</h2>
+      <ol class="steps">
+        <li class="step"><span class="step-num" aria-hidden="true">1</span><span class="step-text">Запросите прайс лист</span></li>
+        <li class="step"><span class="step-num" aria-hidden="true">2</span><span class="step-text">Согласуйте условия с менеджером</span></li>
+        <li class="step"><span class="step-num" aria-hidden="true">3</span><span class="step-text">Получите отгрузку со склада в Москве / по РФ и СНГ</span></li>
+      </ol>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <h2>Категории</h2>
+      <div class="feature-grid category-grid">
+        <a class="feature-card feature-card-link" href="11-catalog-category.html">
+          <img class="feature-ico" src="images/icon-leaf.png" alt="" width="40" height="40">
+          <div class="feature-title">Средства защиты растений</div>
+        </a>
+        <a class="feature-card feature-card-link" href="11-catalog-category-gryuzuny.html">
+          <img class="feature-ico" src="images/icon-rodent.png" alt="" width="40" height="40">
+          <div class="feature-title">Средства защиты от грызунов</div>
+        </a>
+        <a class="feature-card feature-card-link" href="11-catalog-category-prochee.html">
+          <img class="feature-ico" src="images/icon-other.png" alt="" width="40" height="40">
+          <div class="feature-title">Прочее</div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section exclusive-section">
+    <div class="wrap exclusive-inner">
+      <div class="exclusive-copy">
+        <h2>Эксклюзив</h2>
+        <div class="exclusive-text">
+          <p>МосАгро является эксклюзивным дистрибьютором на территории РФ препаратов НВ-101. Производство компании FLORA Co. Ltd. Япония.</p>
+          <p>Импортер в РФ ООО «Флора», биологический концентрированный питательный состав HB-101.</p>
+        </div>
+        <a class="btn btn-outline" href="10-exclusive.html">Подробнее</a>
+      </div>
+    </div>
+  </section>
+  <section class="section partners-section" aria-label="Партнёры">
+    <div class="wrap">
+      <div class="partners-row">
+        <div class="partner-item" title="FLORA"><img src="images/partners/flora.svg" alt="FLORA"></div>
+        <div class="partner-item" title="HB-101"><img src="images/partners/hb101.svg" alt="HB-101"></div>
+        <div class="partner-item" title="GreenField"><img src="images/partners/greenfield.svg" alt="GreenField"></div>
+        <div class="partner-item" title="BioPack"><img src="images/partners/biopack.svg" alt="BioPack"></div>
+        <div class="partner-item" title="AgroPro"><img src="images/partners/agropro.svg" alt="AgroPro"></div>
+        <div class="partner-item" title="EcoLeaf"><img src="images/partners/ecoleaf.svg" alt="EcoLeaf"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="01-home.html">
+        <img class="footer-logo" src="images/logo.png" alt="МосАгро" width="176" height="82">
+      </a>
+      <a class="footer-dealer" href="09-dealer.html">Стать дилером</a>
+      <div class="footer-meta">
+        <a href="mailto:sales@mos-agro.ru">sales@mos-agro.ru</a><br>
+        Москва, м. Свиблово, проезд Нансена, 1
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="04-about.html">О компании</a>
+        <a href="02-catalog.html">Каталог</a>
+        <a href="05-documents.html">Документы</a>
+        <a href="06-contacts.html">Контакты</a>
+      </nav>
+      <nav class="footer-legal" aria-label="Юридические ссылки">
+        <a href="12-requisites.html">Реквизиты</a>
+        <a href="13-privacy.html">Политика ПДн</a>
+        <a href="14-consent.html">Согласие</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="js/menu.js"></script>
+</body>
+</html>

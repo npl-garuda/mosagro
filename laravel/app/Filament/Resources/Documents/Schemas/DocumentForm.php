@@ -26,12 +26,14 @@ class DocumentForm
                     ->openable()
                     ->helperText('Публичный PDF для скачивания на сайте. Только PDF, до 20 МБ.'),
                 Select::make('document_section_id')
-                    ->label('Раздел')
+                    ->label('Раздел на сайте')
+                    ->helperText('Категория в /documents (МосАгро, HB-101…).')
                     ->relationship('section', 'name')
                     ->searchable()
                     ->preload(),
                 Select::make('product_id')
-                    ->label('Товар')
+                    ->label('Препарат (товар)')
+                    ->helperText('На странице раздела документы группируются по препарату. Укажите товар, чтобы PDF попал в блок «Травостоп био», «Абига-пик» и т.п.')
                     ->relationship('product', 'name')
                     ->searchable()
                     ->preload(),
