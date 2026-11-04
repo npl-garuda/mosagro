@@ -39,8 +39,10 @@ class ProductForm
                         ->label('ЧПУ (slug)')
                         ->required()
                         ->maxLength(255)
+                        ->unique(ignoreRecord: true)
                         ->validationMessages([
                             'required' => 'Укажите ЧПУ (slug).',
+                            'unique' => 'Товар с таким ЧПУ (slug) уже есть - откройте его для редактирования или задайте другой slug.',
                         ]),
                     TextInput::make('sort')
                         ->label('Сортировка')

@@ -541,41 +541,126 @@
 (() => {
   const root = document.querySelector('[data-related-slider]');
   if (!root) return;
+  const viewport = root.querySelector('[data-related-viewport]');
   const track = root.querySelector('[data-related-track]');
   const prev = root.querySelector('[data-related-prev]');
   const next = root.querySelector('[data-related-next]');
-  if (!track || !prev || !next) return;
-  if (!track.children.length) return;
-  const gap = () => {
+  if (!viewport || !track || !prev || !next) return;
+  if (track.children.length < 2) return;
+  let animating = false;
+  let cardWidth = 0;
+  let gapSize = 0;
+  let swipeX = 0;
+  let swipeY = 0;
+  let swipeDx = 0;
+  let swipeActive = false;
+  let swipeAxis = null;
+  let swipeMoved = false;
+  const threshold = 40;
+  const visibleCount = () => window.matchMedia('(min-width: 800px)').matches ? 4 : 2;
+  const step = () => cardWidth + gapSize;
+  const layout = () => {
+    const count = visibleCount();
     const styles = getComputedStyle(track);
-    return parseFloat(styles.columnGap || styles.gap) || 0;
+    gapSize = parseFloat(styles.columnGap || styles.gap) || 0;
+    const totalGap = gapSize * Math.max(count - 1, 0);
+    cardWidth = (viewport.clientWidth - totalGap) / count;
+    Array.from(track.children).forEach((card) => {
+      card.style.flex = `0 0 ${cardWidth}px`;
+      card.style.width = `${cardWidth}px`;
+    });
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(0)';
+    root.classList.toggle('is-scrollable', track.children.length > count);
   };
-  const cardStep = () => {
-    const card = track.querySelector('.related-card');
-    if (!card) return 0;
-    return card.getBoundingClientRect().width + gap();
+  const finish = () => {
+    animating = false;
   };
-  const pageStep = () => {
-    const perPage = window.matchMedia('(min-width: 800px)').matches ? 4 : 2;
-    const count = track.querySelectorAll('.related-card').length;
-    return cardStep() * Math.min(perPage, Math.max(count, 1));
+  const commitNext = (fromX = 0) => {
+    const distance = step();
+    animating = true;
+    track.style.transition = 'transform .35s ease';
+    track.style.transform = `translateX(${-distance}px)`;
+    window.setTimeout(() => {
+      track.appendChild(track.firstElementChild);
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(0)';
+      void track.offsetWidth;
+      finish();
+    }, 360);
   };
-  const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
-  const updateNav = () => {
-    const max = maxScroll();
-    const canScroll = max > 2;
-    root.classList.toggle('is-scrollable', canScroll);
-    prev.disabled = !canScroll || track.scrollLeft <= 2;
-    next.disabled = !canScroll || track.scrollLeft >= max - 2;
+  const commitPrev = (fromX = 0) => {
+    const distance = step();
+    animating = true;
+    track.insertBefore(track.lastElementChild, track.firstElementChild);
+    track.style.transition = 'none';
+    track.style.transform = `translateX(${fromX - distance}px)`;
+    void track.offsetWidth;
+    track.style.transition = 'transform .35s ease';
+    track.style.transform = 'translateX(0)';
+    window.setTimeout(finish, 360);
   };
-  prev.addEventListener('click', () => {
-    track.scrollBy({ left: -pageStep(), behavior: 'smooth' });
-  });
-  next.addEventListener('click', () => {
-    track.scrollBy({ left: pageStep(), behavior: 'smooth' });
-  });
-  track.addEventListener('scroll', updateNav, { passive: true });
-  track.addEventListener('scrollend', updateNav);
-  window.addEventListener('resize', updateNav);
-  updateNav();
+  const snapBack = (fromX = 0) => {
+    animating = true;
+    track.style.transition = 'transform .25s ease';
+    track.style.transform = 'translateX(0)';
+    window.setTimeout(finish, 260);
+  };
+  const move = (dir) => {
+    if (animating || track.children.length < 2 || cardWidth <= 0) return;
+    if (dir > 0) commitNext(0);
+    else commitPrev(0);
+  };
+  viewport.addEventListener('touchstart', (e) => {
+    if (animating || e.touches.length !== 1 || !root.classList.contains('is-scrollable')) return;
+    swipeActive = true;
+    swipeAxis = null;
+    swipeMoved = false;
+    swipeDx = 0;
+    swipeX = e.touches[0].clientX;
+    swipeY = e.touches[0].clientY;
+  }, { passive: true });
+  viewport.addEventListener('touchmove', (e) => {
+    if (!swipeActive || e.touches.length !== 1) return;
+    const x = e.touches[0].clientX;
+    const y = e.touches[0].clientY;
+    const dx = x - swipeX;
+    const dy = y - swipeY;
+    if (swipeAxis === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
+      swipeAxis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+    }
+    if (swipeAxis !== 'x') return;
+    e.preventDefault();
+    swipeMoved = true;
+    swipeDx = dx;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(${dx}px)`;
+  }, { passive: false });
+  const endSwipe = () => {
+    if (!swipeActive) return;
+    swipeActive = false;
+    if (swipeAxis !== 'x') return;
+    if (animating) return;
+    if (swipeDx <= -threshold) {
+      commitNext(swipeDx);
+      return;
+    }
+    if (swipeDx >= threshold) {
+      commitPrev(swipeDx);
+      return;
+    }
+    snapBack(swipeDx);
+  };
+  viewport.addEventListener('touchend', endSwipe);
+  viewport.addEventListener('touchcancel', endSwipe);
+  viewport.addEventListener('click', (e) => {
+    if (!swipeMoved) return;
+    e.preventDefault();
+    e.stopPropagation();
+    swipeMoved = false;
+  }, true);
+  prev.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  window.addEventListener('resize', layout);
+  layout();
 })();

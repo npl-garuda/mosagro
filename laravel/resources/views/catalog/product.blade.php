@@ -150,27 +150,29 @@
         <h2>Сопутствующие товары</h2>
         <div class="related-slider" data-related-slider>
             <button type="button" class="related-nav related-prev" data-related-prev aria-label="Назад">‹</button>
-            <div class="related-track" data-related-track>
-                @foreach($related as $item)
-                    @php
-                        $itemUrl = $item->catalogUrl();
-                        $itemImage = $item->publicImageUrl();
-                        $itemType = optional($item->categories->firstWhere('pivot.is_primary', true) ?? $item->categories->first())->name;
-                    @endphp
-                    <a class="related-card" href="{{ $itemUrl ?? route('catalog.index') }}">
-                        <div class="related-ph">
-                            @if($itemImage)
-                                <img src="{{ $itemImage }}" alt="{{ $item->name }}">
-                            @else
-                                Фото скоро
+            <div class="related-viewport" data-related-viewport>
+                <div class="related-track" data-related-track>
+                    @foreach($related as $item)
+                        @php
+                            $itemUrl = $item->catalogUrl();
+                            $itemImage = $item->publicImageUrl();
+                            $itemType = optional($item->categories->firstWhere('pivot.is_primary', true) ?? $item->categories->first())->name;
+                        @endphp
+                        <a class="related-card" href="{{ $itemUrl ?? route('catalog.index') }}">
+                            <div class="related-ph">
+                                @if($itemImage)
+                                    <img src="{{ $itemImage }}" alt="{{ $item->name }}">
+                                @else
+                                    Фото скоро
+                                @endif
+                            </div>
+                            <div class="related-name">{{ $item->name }}</div>
+                            @if($itemType)
+                                <div class="related-sub">{{ $itemType }}</div>
                             @endif
-                        </div>
-                        <div class="related-name">{{ $item->name }}</div>
-                        @if($itemType)
-                            <div class="related-sub">{{ $itemType }}</div>
-                        @endif
-                    </a>
-                @endforeach
+                        </a>
+                    @endforeach
+                </div>
             </div>
             <button type="button" class="related-nav related-next" data-related-next aria-label="Вперёд">›</button>
         </div>
