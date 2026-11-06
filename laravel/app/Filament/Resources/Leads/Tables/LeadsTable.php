@@ -35,33 +35,41 @@ class LeadsTable
                     ->label('Тип')
                     ->formatStateUsing(fn (?string $state): string => self::typeLabel($state))
                     ->badge()
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('name')
                     ->label('Организация')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('phone')
                     ->label('Телефон')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('email')
                     ->label('Email')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('inn')
                     ->label('ИНН')
                     ->searchable()
+                    ->sortable()
                     ->toggleable(),
                 TextColumn::make('city')
                     ->label('Город')
                     ->searchable()
+                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('contact_preference')
                     ->label('Формат работы')
                     ->searchable()
+                    ->sortable()
                     ->toggleable(),
                 TextColumn::make('status')
                     ->label('Статус')
                     ->formatStateUsing(fn (?string $state): string => self::statusLabel($state))
                     ->badge()
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('created_at')
                     ->label('Создана')
                     ->dateTime('d.m.Y H:i')

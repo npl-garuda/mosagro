@@ -22,16 +22,20 @@ class CategoriesTable
                         $url = e(CategoryIcons::assetUrl($state));
                         return '<img src="'.$url.'" alt="" width="28" height="28">';
                     })
-                    ->html(),
+                    ->html()
+                    ->sortable(),
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('slug')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('sort')
                     ->numeric()
                     ->sortable(),
                 IconColumn::make('is_active')
-                    ->boolean(),
+                    ->boolean()
+                    ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

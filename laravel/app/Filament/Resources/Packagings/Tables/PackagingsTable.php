@@ -15,9 +15,11 @@ class PackagingsTable
         return $table
             ->columns([
                 TextColumn::make('product.name')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('sort')
                     ->numeric()
                     ->sortable(),

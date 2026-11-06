@@ -27,16 +27,27 @@ class DocumentsRelationManager extends RelationManager
                     ->required()
                     ->maxLength(255),
                 FileUpload::make('file_path')
-                    ->label('Файл (PDF)')
+                    ->label('Файл')
                     ->disk('public')
                     ->directory('documents')
                     ->visibility('public')
-                    ->acceptedFileTypes(['application/pdf'])
+                    ->acceptedFileTypes([
+                        'application/pdf',
+                        'image/jpeg',
+                        'image/png',
+                        'image/webp',
+                        'image/gif',
+                        'image/bmp',
+                        'image/tiff',
+                        'image/svg+xml',
+                        'image/heic',
+                        'image/heif',
+                    ])
                     ->maxSize(20480)
                     ->required()
                     ->downloadable()
                     ->openable()
-                    ->helperText('Публичный PDF. Можно добавить несколько документов к одному товару.'),
+                    ->helperText('PDF или изображение (JPEG, PNG, WebP, GIF, BMP, TIFF, SVG, HEIC). Можно несколько документов к одному товару.'),
                 Select::make('document_section_id')
                     ->label('Раздел документов')
                     ->relationship('section', 'name')
@@ -56,12 +67,15 @@ class DocumentsRelationManager extends RelationManager
             ->columns([
                 TextColumn::make('title')
                     ->label('Название')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('file_path')
                     ->label('Файл')
+                    ->sortable()
                     ->placeholder('-'),
                 TextColumn::make('section.name')
                     ->label('Раздел')
+                    ->sortable()
                     ->placeholder('-'),
                 TextColumn::make('sort')
                     ->label('Сорт.')

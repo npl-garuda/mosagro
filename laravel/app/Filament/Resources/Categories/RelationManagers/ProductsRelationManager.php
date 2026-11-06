@@ -28,9 +28,11 @@ class ProductsRelationManager extends RelationManager
                     ->sortable(),
                 TextColumn::make('brand.name')
                     ->label('Бренд')
+                    ->sortable()
                     ->placeholder('-'),
                 TextColumn::make('slug')
                     ->label('Slug')
+                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 IconColumn::make('is_primary')
                     ->label('Основная')
@@ -38,7 +40,8 @@ class ProductsRelationManager extends RelationManager
                     ->getStateUsing(fn ($record): bool => (bool) ($record->pivot?->is_primary)),
                 IconColumn::make('is_active')
                     ->label('Активен')
-                    ->boolean(),
+                    ->boolean()
+                    ->sortable(),
                 TextColumn::make('product_sort')
                     ->label('Sort')
                     ->numeric()

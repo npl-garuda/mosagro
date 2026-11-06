@@ -123,7 +123,7 @@
                                 <li class="product-doc">
                                     <span class="product-doc-title">{{ $document->title }}</span>
                                     @if($document->publicFileUrl())
-                                        <a class="product-doc-link" href="{{ $document->publicFileUrl() }}" target="_blank" rel="noopener noreferrer">PDF ↓</a>
+                                        <a class="product-doc-link" href="{{ $document->publicFileUrl() }}" target="_blank" rel="noopener noreferrer">{{ $document->downloadLabel() }}</a>
                                     @elseif($document->external_url)
                                         <a class="product-doc-link" href="{{ $document->external_url }}" target="_blank" rel="noopener noreferrer">Открыть ↓</a>
                                     @else

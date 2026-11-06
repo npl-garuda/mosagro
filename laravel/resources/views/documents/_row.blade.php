@@ -7,7 +7,7 @@
             <img class="docs-row-ico" src="{{ asset('images/icon-docs.png') }}" alt="" width="22" height="22">
             <span class="docs-row-title">{{ $document->title }}</span>
         </a>
-        <a class="docs-row-link" href="{{ $fileUrl }}" target="_blank" rel="noopener noreferrer">PDF ↓</a>
+        <a class="docs-row-link" href="{{ $fileUrl }}" target="_blank" rel="noopener noreferrer">{{ $document->downloadLabel() }}</a>
     @else
         <div class="docs-row-main">
             <img class="docs-row-ico" src="{{ asset('images/icon-docs.png') }}" alt="" width="22" height="22">

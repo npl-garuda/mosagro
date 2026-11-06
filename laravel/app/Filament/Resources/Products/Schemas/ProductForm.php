@@ -157,6 +157,7 @@ class ProductForm
                     ->label('Изображения')
                     ->multiple()
                     ->reorderable()
+                    ->appendFiles()
                     ->disk('public')
                     ->directory('products')
                     ->visibility('public')

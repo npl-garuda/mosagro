@@ -15,16 +15,27 @@ class DocumentForm
                     ->required()
                     ->maxLength(255),
                 FileUpload::make('file_path')
-                    ->label('Файл (PDF)')
+                    ->label('Файл')
                     ->disk('public')
                     ->directory('documents')
                     ->visibility('public')
-                    ->acceptedFileTypes(['application/pdf'])
+                    ->acceptedFileTypes([
+                        'application/pdf',
+                        'image/jpeg',
+                        'image/png',
+                        'image/webp',
+                        'image/gif',
+                        'image/bmp',
+                        'image/tiff',
+                        'image/svg+xml',
+                        'image/heic',
+                        'image/heif',
+                    ])
                     ->maxSize(20480)
                     ->required()
                     ->downloadable()
                     ->openable()
-                    ->helperText('Публичный PDF для скачивания на сайте. Только PDF, до 20 МБ.'),
+                    ->helperText('PDF или изображение (JPEG, PNG, WebP, GIF, BMP, TIFF, SVG, HEIC). До 20 МБ.'),
                 Select::make('document_section_id')
                     ->label('Раздел на сайте')
                     ->helperText('Категория в /documents (МосАгро, HB-101…).')
@@ -33,7 +44,7 @@ class DocumentForm
                     ->preload(),
                 Select::make('product_id')
                     ->label('Препарат (товар)')
-                    ->helperText('На странице раздела документы группируются по препарату. Укажите товар, чтобы PDF попал в блок «Травостоп био», «Абига-пик» и т.п.')
+                    ->helperText('На странице раздела документы группируются по препарату. Укажите товар, чтобы файл попал в блок «Травостоп био», «Абига-пик» и т.п.')
                     ->relationship('product', 'name')
                     ->searchable()
                     ->preload(),

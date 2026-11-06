@@ -72,16 +72,23 @@ class Product extends Model
     public function primaryImage(): ?ProductImage
     {
         if ($this->relationLoaded('images')) {
-            return $this->images->firstWhere('is_primary', true)
-                ?? $this->images->sortBy('sort')->first();
+            $ordered = $this->images->sortBy([
+                ['sort', 'asc'],
+                ['id', 'asc'],
+            ])->values();
+            return $ordered->firstWhere('is_primary', true) ?? $ordered->first();
         }
         return $this->images()->where('is_primary', true)->first()
-            ?? $this->images()->orderBy('sort')->first();
+            ?? $this->images()->orderBy('sort')->orderBy('id')->first();
     }
     public function galleryImageUrls(): Collection
     {
         if ($this->relationLoaded('images') && $this->images->isNotEmpty()) {
             return $this->images
+                ->sortBy([
+                    ['sort', 'asc'],
+                    ['id', 'asc'],
+                ])
                 ->map(fn (ProductImage $image) => $image->publicUrl())
                 ->filter()
                 ->values();

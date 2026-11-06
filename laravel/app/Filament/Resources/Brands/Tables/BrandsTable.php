@@ -16,14 +16,17 @@ class BrandsTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('slug')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('sort')
                     ->numeric()
                     ->sortable(),
                 IconColumn::make('is_active')
-                    ->boolean(),
+                    ->boolean()
+                    ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

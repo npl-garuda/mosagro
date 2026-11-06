@@ -17,9 +17,11 @@ class LeadRecipientsTable
             ->columns([
                 TextColumn::make('email')
                     ->label('Email address')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 IconColumn::make('is_active')
-                    ->boolean(),
+                    ->boolean()
+                    ->sortable(),
                 TextColumn::make('sort')
                     ->numeric()
                     ->sortable(),

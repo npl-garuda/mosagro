@@ -31,4 +31,19 @@ class Document extends Model
         }
         return Storage::disk('public')->url($path);
     }
+    public function downloadLabel(): string
+    {
+        $path = $this->file_path;
+        if (! is_string($path) || $path === '') {
+            return 'Скачать ↓';
+        }
+        $ext = strtoupper(pathinfo($path, PATHINFO_EXTENSION));
+        if ($ext === '') {
+            return 'Скачать ↓';
+        }
+        if ($ext === 'JPEG') {
+            $ext = 'JPG';
+        }
+        return $ext.' ↓';
+    }
 }
